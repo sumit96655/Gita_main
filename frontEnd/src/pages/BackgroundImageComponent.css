@@ -1,0 +1,184 @@
+/* BackgroundImageComponent.css
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    margin-left: 10px;
+  }
+  
+ 
+   */
+/* BackgroundImageComponent.css */
+/* 
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+ 
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    
+    height: 100%;
+  }
+  
+  .intro-text {
+    text-align: left;
+    max-width: 50%;
+    padding: 20px;
+    color: #fff; 
+  }
+  
+  .intro-header {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .intro-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .intro-description span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(1em);
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+   */
+/* BackgroundImageComponent.css */
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column; /* Display content in a column */
+    align-items: flex-start; /* Align content to the left */
+    padding: 110px;
+    background-color: rgba(0, 0, 0, 0.666);
+  }
+  
+  .intro-text,
+  .about-text {
+    text-align: left;
+    font-weight: bold;
+    max-width: 50%;
+    margin-bottom: 20px;
+    color: #ffffff; /* Set the text color */
+  }
+  
+  .intro-header,
+  .about-text h2,
+  .about-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top :20px ;
+    /* background-color: rgba(0, 0, 0, 0.666); */
+    color:rgb(166, 161, 161) ;
+  }
+  
+  .about-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(1em);
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .features-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .features {
+    text-align: left;
+    max-width: 50%;
+    margin-bottom: 20px;
+    color: #fff; /* Set the text color */
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    padding-left: 40px;
+  }
+  
+  .features ul {
+    list-style-type: none;
+    padding-left: 60px;
+    
+  }
+  
+  .features li {
+    margin-bottom: 8px;
+    padding: 5px;
+    border-radius: 10px;
+    /* background-color: rgb(122, 0, 122); */
+    background-color: rgb(224, 154, 5);
+    color: black;
+    font-weight:bold;
+  }
+  
+  .chatbot-icon {
+    margin-top: 20px; /* Add space between features and chatbot icon */
+  }
+  
+  /* Style your chatbot icon or button as needed */
+  .chatbot-icon img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 50%;
+    /* Add additional styles as needed */
+  }
