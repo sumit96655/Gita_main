@@ -24,11 +24,11 @@ const Sidebar = () => {
     `}
     >
       <li
-        onClick={() => navigate("/discussion")
+        onClick={() => navigate("/layout/discussion")
       }
         className={
           "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 hover:cursor-pointer " +
-          (location === "/discussion" ? active : " ")
+          (location === "/layout/discussion" ? active : " ")
         }
       >
         <svg
@@ -48,10 +48,10 @@ const Sidebar = () => {
         DISCUSSION
       </li>
       <li
-        onClick={() => navigate("/explore")}
+        onClick={() => navigate("/layout/explore")}
         className={
           "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer " +
-          (location === "/explore" ? active : "")
+          (location === "/layout/explore" ? active : "")
         }
       >
         <svg
@@ -72,11 +72,11 @@ const Sidebar = () => {
       </li>
       <li
         onClick={() => {
-          navigate("/chat");
+          navigate("/layout/chat");
         }}
         className={
           "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer " +
-          (location === "/chat" ? active : "")
+          (location === "/layout/chat" ? active : "")
         }
       >
         <svg
@@ -101,10 +101,10 @@ const Sidebar = () => {
         CHAT
       </li>
       <li
-        onClick={() => navigate("/myqna")}
+        onClick={() => navigate("/layout/myqna")}
         className={
           "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer " +
-          (location === "/myqna" ? active : "")
+          (location === "/layout/myqna" ? active : "")
         }
       >
         <svg
@@ -126,7 +126,7 @@ const Sidebar = () => {
 
       <li
         onClick={() => {
-          navigate("/ask");
+          navigate("/layout/ask");
           dispatch(toggle());
         }}
         className="md:hidden flex items-center justify-center gap-2 px-4 py-2 cursor-pointer 

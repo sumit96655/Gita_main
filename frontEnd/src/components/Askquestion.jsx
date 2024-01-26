@@ -31,7 +31,7 @@ const Askquestion = () => {
     if (res.status === 201) {
       toast.success("Question added successfully", (duration = 2000));
       setTimeout(() => {
-        navigate("/");
+        navigate("/layout");
       }, 2000);
     }
   };

@@ -50,7 +50,7 @@ function Navbar() {
           md:text-xl font-bold pr-2 "
             onClick={() => {
               localStorage.removeItem("user");
-              navigate("/home");
+              navigate("/");
             }}
           >
             Logout

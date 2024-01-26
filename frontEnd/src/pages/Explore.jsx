@@ -52,7 +52,7 @@ const hexColorCodes = [
 
 const Explore = () => {
   const navigateToTopic = (topic) => {
-    window.location.href = `/explore/${topic.toLowerCase()}`;
+    window.location.href = `/layout/explore/${topic.toLowerCase()}`;
   };
   return (
     <div className="w-full md:w-[50%] text-center h-screen mt-8">
