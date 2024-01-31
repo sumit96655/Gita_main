@@ -118,12 +118,12 @@ const Layout = () => {
 
   return (
     <QueryClientProvider client={queryClient} contextSharing={true}>
-      <div className="fixed">
+      <div className="">
         {/* <Navbar /> */}
         <div className="w-screen h-screen flex justify-center items-start px-4 md:px-12 pt-12 ">
           <Sidebar />
           <Outlet />
-          <div className="right-section hidden md:block h-80 fixed z-10 top-24 right-28">
+          <div className="right-section hidden md:block h-80 z-10 top-24 right-28">
             <CreateButton />
             <div className="mt-8 py-4 px-3 rounded-md flex flex-col items-start gap-5">
               <h2 className="text-gray-600 font-bold text-start">Top Users</h2>

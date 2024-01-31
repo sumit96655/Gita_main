@@ -1,0 +1,40 @@
+Chandrayaan-3 (/ˌtʃʌndrəˈjɑːn/ CHUN-drə-YAHN) is the third mission in the Chandrayaan programme, a series of lunar-exploration missions developed by the Indian Space Research Organisation (ISRO).[7] The mission consists of a lunar lander named Vikram and a lunar rover named Pragyan, similar to those launched aboard Chandrayaan-2 in 2019.
+
+Chandrayaan-3 was launched from Satish Dhawan Space Centre on 14 July 2023. The spacecraft entered lunar orbit on 5 August, and the lander touched down near the Lunar south pole[8] on 23 August at 18:03 IST (12:33 UTC), making India the fourth country to successfully land on the Moon, and the first to do so near the lunar south pole.[9][note 1] On 3 September the lander hopped and repositioned itself 30–40 cm (12–16 in) from its landing site.[13] After the completion of its mission objectives, it was hoped that the lander and rover would revive for extra tasks, on 22 September 2023, but missed the wake-up call. On September 30, the second lunar night began, eliminating hopes of revival.[14][15]
+
+History
+Further information: Chandrayaan programme
+See also: Lunar south pole
+On 22 July 2019, ISRO launched Chandrayaan-2 on board a Launch Vehicle Mark-3 (LVM3) launch vehicle consisting of an orbiter, a lander and a rover.[16] The lander was scheduled to touch down on the lunar surface on 6 September 2019 to deploy the Pragyan rover. The lander lost contact with mission control, deviated from its intended trajectory while attempting to land near the lunar south pole, and crashed.[17][18]
+
+The lunar south pole region holds particular interest for scientific exploration. Studies show large amounts of ice there. Mountainous terrain and unpredictable lighting protect the ice from melting, but they also make landing scientific probes there a challenging undertaking. The ice could contain solid-state compounds that would normally melt under warmer conditions elsewhere on the Moon—compounds which could provide insight into lunar, Earth, and Solar System history. For future crewed missions and outposts, ice could also be a source of drinking water and of hydrogen for fuel and oxygen.[19][20]
+
+The European Space Tracking network (ESTRACK), operated by the European Space Agency (ESA), and Deep Space Network operated by Jet Propulsion Laboratory (JPL) of NASA are supporting the mission.[21] Under a new cross-support arrangement, ESA tracking support could be provided for upcoming ISRO missions such as those of India's first human spaceflight programme, Gaganyaan, and the Aditya-L1 solar research mission. In return, future ESA missions will receive similar support from ISRO's own tracking stations.[22]
+
+Objectives
+ISRO's mission objectives for the Chandrayaan-3 mission are:
+
+Engineering and implementing a lander to land safely and softly on the surface of the Moon.
+Observing and demonstrating the rover's driving capabilities on the Moon.
+Conducting and observing experiments on the materials available on the lunar surface to better understand the composition of the Moon.[23]
+Spacecraft
+Design
+Chandrayaan-3 comprises three main components: a propulsion module, lander, and rover.
+
+Chandrayaan-3 encapsulated within LVM3's payload fairing
+Chandrayaan-3 encapsulated within LVM3's payload fairing
+
+ 
+Chandrayaan-3 integrated components
+Chandrayaan-3 integrated components
+
+Propulsion module
+The propulsion module carried the lander and rover configuration to a 100-kilometre (62 mi) lunar orbit. It was a box-like structure with a large solar panel mounted on one side and a cylindrical mounting structure for the lander (the Intermodular Adapter Cone) on top.[24][25]
+
+A few months after the conclusion of the lander portion of the mission, ISRO officials said that the propulsion module is equipped with two radioisotope heating units (RHU) generating one watt designed and developed by BARC (Bhabha Atomic Research Centre). RHUs keep the spacecraft at their operational temperatures by the decay of radioactive material, leading to electricity generation to power heaters, even with solar power or using battery power. It is to be thought that National Security reasons delayed the disclosure to the media. Chandrayaan 3 project director P Veeramuthuvel said ISRO may soon use nuclear resources to maintain instruments in future rovers. ISRO officials later said the RHUs could not be installed on Chandrayaan 3’s Vikram lander and Pragyan rover because it would have increased their mass which unfortunately led them to have a maximum lifespan of 14 earth days or 1 lunar day.[26][27][28]
+
+Propulsion module
+Propulsion module
+
+Vikram Lander
+The Vikram lander was responsible for the soft landing on the Moon. It is also box-shaped, with four landing legs and four landing thrusters capable of producing 800 newtons of thrust each. It carried the rover and has various scientific instruments to perform on-site analysis.[29][30] The lander has four variable-thrust engines with slew rate changing capabilities, unlike Chandrayaan-2's lander, which had five, with the fifth one being centrally mounted and capable only of fixed thrust. One of the main reasons for Chandrayaan-2's landing failure was altitude increase during the camera coasting phase. This was removed by allowing the lander to control attitude and thrust during all phases of descent. Attitude correction rate was increased from Chandrayaan-2's 10°/s to 25°/s with Chandrayaan-3. Additionally, the Chandrayaan-3 lander is equipped with a laser Doppler velocimeter (LDV) to allow measuring altitude in three directions.[31][32] The impact legs were made stronger compared to Chandrayaan-2 and instrumentation redundancy was improved. It targeted a more precise 16 km2 (6.2 sq mi) landing region based on images provided by the Orbiter High-Resolution Camera (OHRC) onboard Chandrayaan-2's orbiter. ISRO improved the structural rigidity, increased polling in instruments, increased data frequency and transmission, and added additional multiple contingency systems to improve lander survivability in the event of failure during descent and landing.[33][32]

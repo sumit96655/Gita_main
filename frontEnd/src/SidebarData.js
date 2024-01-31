@@ -2,6 +2,10 @@ import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
+import {RiRobot2Line} from 'react-icons/ri';
+import {TiMessages} from 'react-icons/ti';
+import {IoSearchSharp} from 'react-icons/io5';
+import { GrChapterAdd } from "react-icons/gr";
 
 export const SidebarData = [
   {
@@ -11,33 +15,33 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'chatbot',
+    title: 'ChatBot',
     path: '/home',
-    icon: <FaIcons.FaCartPlus />,
+    icon: <RiRobot2Line />,
     cName: 'nav-text'
   },
   {
     title: 'Discussion Forum',
     path: '/DiscussionForum',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <TiMessages />,
     cName: 'nav-text'
   },
   {
-    title: 'Reports',
+    title: 'Chapter Summary',
     path: '/reports',
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <GrChapterAdd />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Search Verse',
+    path: '/SearchVerse',
+    icon: <IoSearchSharp />,
     cName: 'nav-text'
   },
   {
     title: 'Team',
     path: '/team',
     icon: <IoIcons.IoMdPeople />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Search Verse',
-    path: '/SearchVerse',
-    icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },
   {

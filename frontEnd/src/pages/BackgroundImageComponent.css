@@ -82,6 +82,8 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    z-index: 1;
+   
   }
   
   
@@ -93,7 +95,9 @@
     flex-direction: column; /* Display content in a column */
     align-items: flex-start; /* Align content to the left */
     padding: 110px;
+    height: 850px;
     background-color: rgba(0, 0, 0, 0.666);
+   
   }
   
   .intro-text,

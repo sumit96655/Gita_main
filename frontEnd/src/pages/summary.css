@@ -220,6 +220,7 @@ main {
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   position: relative;
+  overflow: hidden;
 }
 
 .single-tour:hover {
@@ -229,9 +230,10 @@ main {
 .single-tour img {
   width: 100%;
   height: 20rem;
-  object-fit: cover;
+  object-fit: fill;
   border-top-right-radius: var(--radius);
   border-top-left-radius: var(--radius);
+  
 }
 
 .tour-info {

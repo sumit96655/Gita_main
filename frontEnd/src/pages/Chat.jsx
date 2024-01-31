@@ -5,7 +5,7 @@ import Send from "../icons/Send";
 import { useNavigate } from "react-router-dom";
 import _, { set } from "lodash";
 import moment from "moment";
-import { socket } from "../App2";
+import { socket } from "../App";
 import { useSelector } from "react-redux";
 
 const discussionTopics = [

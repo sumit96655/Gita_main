@@ -15,7 +15,7 @@ import Loading from './Loading';
 import Tours from './Tours';
 import './summary.css';
 
-const url = 'https://course-api.com/react-tours-project';
+const url = 'http://localhost:5000/tours';
 //mongodb://localhost:27017
 
 const Reports = () => {

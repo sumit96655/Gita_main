@@ -1,8 +1,7 @@
 import React from "react";
 import "../index.css";
 import ChatBotPage from "../ChatBotPage";
-
-
+// import { ChatProvider } from "../ChatBotPage";
 
 function Home() {
   return (
@@ -39,8 +38,9 @@ function Home() {
         
       
       </div> */}
-     
-      <ChatBotPage  />
+        
+        <ChatBotPage  />
+      
      
       </main>
       
