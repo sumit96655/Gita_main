@@ -1,79 +1,77 @@
-// import React from 'react'
+import React, { useCallback, useState } from 'react';
+import { useResizeObserver } from '@wojtekmaj/react-hooks';
+import { pdfjs, Document, Page } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
 
-// function Likemindedpeoplecommunity() {
-//   return (
-//     <div className='likepeople'>
-//         <h1>Likeminded people community</h1>
-//     </div>
-//   )
-// }
+import './sample.css';
+// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.js',
+  import.meta.url,
+).toString();
 
-// export default Likemindedpeoplecommunity
+const options = {
+  cMapUrl: '/cmaps/',
+  standardFontDataUrl: '/standard_fonts/',
+};
 
+const resizeObserverOptions = {};
 
-  import React, {useState} from 'react'
-  import './pdf.css';
-  // import { Document,Page } from 'react-pdf';
+const maxWidth = 800;
 
-  import { Document, Page, pdfjs } from 'react-pdf';
-  pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
-  // import { Document, Page } from 'react-pdf';
+const Sample = () => {
+  const [file, setFile] = useState('./gita.pdf');
+  const [numPages, setNumPages] = useState();
+  const [containerRef, setContainerRef] = useState(null);
+  const [containerWidth, setContainerWidth] = useState();
 
+  const onResize = useCallback((entries) => {
+    const [entry] = entries;
 
-  function Likemindedpeoplecommunity() {
-
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-
-    function onDocumentLoadSuccess({numPages}){
-      setNumPages(numPages);
-      setPageNumber(1);
+    if (entry) {
+      setContainerWidth(entry.contentRect.width);
     }
+  }, []);
 
-    function changePage(offSet){
-      setPageNumber(prevPageNumber => prevPageNumber + offSet);
+  useResizeObserver(containerRef, resizeObserverOptions, onResize);
+
+  const onFileChange = (event) => {
+    const { files } = event.target;
+
+    if (files && files[0]) {
+      setFile(files[0] || null);
     }
+  };
 
-    function changePageBack(){
-      changePage(-1)
-    }
+  const onDocumentLoadSuccess = ({ numPages: nextNumPages }) => {
+    setNumPages(nextNumPages);
+  };
 
-    function changePageNext(){
-      changePage(+1)
-    }
-
-    return (
-      <div className="App">
-        <header className="App-header">
-          <Document file="./gita.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-            <Page height="600" pageNumber={pageNumber} />
+  return (
+    <div className="Example">
+      <header>
+        <h1>react-pdf sample page</h1>
+      </header>
+      <div className="Example__container">
+        <div className="Example__container__load">
+          <label htmlFor="file">Load from file:</label>{' '}
+          <input onChange={onFileChange} type="file" />
+        </div>
+        <div className="Example__container__document" ref={setContainerRef}>
+          <Document file={file} onLoadSuccess={onDocumentLoadSuccess} options={options}>
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+                width={containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth}
+              />
+            ))}
           </Document>
-          <p> Page {pageNumber} of {numPages}</p>
-          { pageNumber > 1 && 
-          <button onClick={changePageBack}>Previous Page</button>
-          }
-          {
-            pageNumber < numPages &&
-            <button onClick={changePageNext}>Next Page</button>
-          }
-        </header>
-        {/* <center>
-          <div>
-            <Document file="C:\Users\sumit\website2\frontEnd\public\assign2.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-              {Array.from(
-                new Array(numPages),
-                (el,index) => (
-                  <Page 
-                    key={`page_${index+1}`}
-                    pageNumber={index+1}
-                  />
-                )
-              )}
-            </Document>
-          </div>
-        </center> */}
+        </div>
       </div>
-    );
-  }
+    </div>
+  );
+};
 
-  export default Likemindedpeoplecommunity;
+export default Sample;

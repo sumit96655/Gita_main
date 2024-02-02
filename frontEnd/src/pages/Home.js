@@ -6,7 +6,7 @@ import ChatBotPage from "../ChatBotPage";
 function Home() {
   return (
     <div >
-      <main classNameName=" flex justify-around" >
+      <div className="mt-28" >
       {/* <div className="flex flex-col my-0 mx-auto">
         <select
           name="select"
@@ -42,7 +42,7 @@ function Home() {
         <ChatBotPage  />
       
      
-      </main>
+      </div>
       
       
     </div>
