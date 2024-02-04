@@ -1,9 +1,11 @@
 # import flask
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import verse
 from verse import create_vector_db_from_pdf, get_response_from_query
 
 app = Flask(__name__)
+CORS(app) 
 pdf_text = create_vector_db_from_pdf()
 
 @app.route("/")

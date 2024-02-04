@@ -34,7 +34,7 @@ def create_vector_db_from_pdf():
 
 def get_response_from_query(db, query,k=2):
 
-    prompt = 'rewrite the chapter or verse for ' + query
+    prompt = 'write the chapter number and the verse numbers in the chapter which relate to ' + query
     # expose this index in a retriever interface
     retriever = db.as_retriever(search_type="similarity", search_kwargs={"k":2})
 

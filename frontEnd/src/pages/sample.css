@@ -53,6 +53,7 @@
   width: 89%; /* Adjust the width as needed */
   max-width: calc(89% -2em);
   margin: 1em 2em;
+  margin-left: 7em;
 }
 
 .Example__container__document .react-pdf__Document {

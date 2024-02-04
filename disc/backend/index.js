@@ -50,7 +50,7 @@ const tours = [
         "id": "05",
         "name": "Chapter 05: Karma – yoga – Action in Krishna Consciousness",
         "info": "Arjuna is still confused about what is better: renunciation of work or work in devotion. Krishna explains that devotional service is better. Since everything belongs to Krishna, nothing is one’s own to renounce. Thus whatever one possesses one should use in Krishna’s service. A person working in such consciousness is renounced. This process, called karma yoga, helps one escape the result of fruitive action—entanglement in rebirth.One, who works in devotion with his mind and senses controlled, is in divine consciousness. Although his senses are engaged with sense objects, he is aloof, situated in peace and happiness.",
-        "image": "https://live.staticflickr.com/65535/53499997260_246dd96000_z.jpg",
+        "image": "https://live.staticflickr.com/65535/53503833126_44571359c4_z.jpg",
         "price": "1,995"
     },
     {
@@ -65,7 +65,7 @@ const tours = [
         "id": "07",
         "name": "Chapter 07: Knowledge of the Absolute",
         "info": "Krishna reveals Himself as the origin of all material and spiritual energies. Although His energy manifests material nature, with three states of being (goodness, passion, and ignorance), Krishna is not under material control. But everyone else is, except those who have surrendered unto Him.Krishna is the essence of everything; the taste of water, the heat in fire, the sound in ether, the light of the sun and the moon, the ability in man, the original fragrance of the earth, the intelligence of the intelligent, and the life of all that lives.Four types of men surrender to Krishna, and four types don’t. Those who do not surrender remain covered by Krishna’s temporary, illusory potency and can never know Him, but pious people become eligible for surrender to devotional service. Among them, those who understand that Krishna is the cause of all causes engage in devotional service with great determination and become dear to Krishna. These rare souls are sure to attain Him.",
-        "image": "https://www.course-api.com/images/tours/tour-1.jpeg",
+        "image": "https://live.staticflickr.com/65535/53504140318_c83a96e10f_w.jpg",
         "price": "1,995"
     },
     {
@@ -86,14 +86,14 @@ const tours = [
         "id": "Chapter 10",
         "name": "Chapter 10: the Opulence of the Absolute",
         "info": "Devotees know Krishna as the unborn, the beginning less, the Supreme Lord of all worlds, the creator of the patriarchs from whom all living being descend, the origin of everything.Intelligence, knowledge, truthfulness, mental and sensory control, fearlessness, non-violence, austerity, birth, death, fear, distress, infamy–all qualities, good and bad, are created by Krishna. Devotional service helps one develop all good qualities.The devotees who lovingly engage in devotional service have full faith in Krishna’s opulences, mystic power, and supremacy. The thoughts of such devotees dwell in Krishna. Their lives are devoted to His service, and they derive great bliss and satisfaction by enlightening one another and conversing about Him.Devotees engaged in pure devotional service, even if lacking education or knowledge of the Vedic principles, are helped from within by Krishna, who personally destroys the darkness born out of ignorance.Arjuna has realized Krishna’s position as the Supreme Personality of Godhead, the ultimate abode and the Absolute Truth, the purest, the transcendental and the original person, the unborn, the greatest, the origin, and the Lord of all. Now Arjuna wants to know more. Lord Krishna tells more, and then concludes: “All opulent, beautiful, and glorious creations spring from but a spark of My splendor.”",
-        "image": "https://www.course-api.com/images/tours/tour-2.jpeg",
+        "image": "https://live.staticflickr.com/65535/53504302994_46b805755d_n.jpg",
         "price": "3,895"
     },
     {
         "id": "Chapter 11",
         "name": "Chapter 11: The Universal Form",
         "info": "To protect innocent people from imposters, Arjuna asks Krishna to prove His divinity by exhibiting His universal form – a form that anyone who claims to be God should be prepared to show. Krishna gives Arjuna divine vision by which to see the brilliant, glaring, unlimited universal form, which reveals, in one place, everything that ever was or now is or will be.Arjuna offers obeisances with folded hands and glorifies the Lord. Krishna then reveals that except for the five Pandavas, all the soldiers assembled on the battlefield will be killed. Therefore Krishna exhorts Arjuna to fight as His instrument and guarantees him victory and a flourishing kingdom.Arjuna requests Krishna to withdraw His fearful form and show His original form. The Lord then exhibits His four-armed form and at last His original two-armed form. Upon seeing the Lord’s beautiful humanlike form, Arjuna becomes pacified. One who is engaged in pure devotional service can see such a form.",
-        "image": "https://live.staticflickr.com/65535/53498691832_00f872f255_n.jpg",
+        "image": "https://live.staticflickr.com/65535/53502955027_98f069116f_n.jpg",
         "price": "1,995"
     },
     {
@@ -107,7 +107,7 @@ const tours = [
         "id": "Chapter 13",
         "name": "Chapter 13: Nature, the Enjoyer and Consciousness",
         "info": "Arjuna wants to know about prakriti (nature), purusa (the enjoyer), ksetra (the field), ksetra-jna (the knower of the field), jnana (knowledge), and gnaya (the object of knowledge).Krishna explains that the ksetra is the conditioned soul’s field of activity the body. Within it reside both the living entity and the Supreme Lord, who are called ksetra-jna, the knowers of the field. Jnana, knowledge, means understanding of the body and its knowers. Knowledge involves qualities such as humility, nonviolence, tolerance, cleanliness, self-control, absence of false ego, and even – mindedness amid pleasant and unpleasant events.Jnaya, the object of knowledge, is the Super soul. Prakriti, nature, is the causes of all material causes and effects. The two purusas, or enjoyers, are the living entity and the Super soul. A person who can see that the individual soul and the Super soul remain unchanged throughout various types of material bodies they successfully inhabit and is said to possess the vision of eternity. By understanding the difference between the body and the knower of the body, and by understanding the process of liberation from material bondage, one reaches the supreme goal.",
-        "image": "https://live.staticflickr.com/65535/53499731253_7a312a4b66_n.jpg",
+        "image": "https://live.staticflickr.com/65535/53502828440_9748ca05f2_n.jpg",
         "price": "3,895"
     },
     {
@@ -134,15 +134,15 @@ const tours = [
     {
         "id": "Chapter 17",
         "name": "Chapter 17: The Divisions of Faith",
-        "info": "Arjuna asks. “what mode of nature governs those who do not follow the principles of scripture but worship according to their own imagination?”In reply, Krishna analyzes the different kinds of faith, food, charity, austerity, sacrifice, and penance that mark the different modes of material nature.The three words “om tat” sat are symbolic representations of the Supreme Absolute Truth. Om indicates the Supreme, tat is used for getting free from material entanglement, and sat indicates that the Absolute Truth is the objective of devotional service. Any sacrifice, charity, or penance performed without faith in the Supreme is called asat, impermanent.",
-        "image": "https://www.course-api.com/images/tours/tour-2.jpeg",
+        "info": "Arjuna asks. “what mode of nature governs those who do not follow the principles of scripture but worship according to their own imagination?”In reply, Krishna analyzes the different kinds of faith, food, charity, austerity, sacrifice, and penance that mark the different modes of material nature.The three words “om tat sat” are symbolic representations of “Hari is the Supreme Truth”. Om indicates the Supreme, tat is used for getting free from material entanglement, and sat indicates that the Absolute Truth is the objective of devotional service. Any sacrifice, charity, or penance performed without faith in the Supreme is called asat, impermanent.",
+        "image": "https://live.staticflickr.com/65535/53504297714_75b1012d8f_w.jpg",
         "price": "3,895"
     },
     {
         "id": "Chapter 18",
         "name": "Chapter 18-Conclusion: The Perfection of Renunciation",
         "info": "Arjuna asks Krishna about the purpose of tyaga (renunciation) and sannyasa (the renounced order of life). Krishna explains these and the five causes of action, the three factors that motivate action, and the three constituents of action. He also describes action, understanding, determination, happiness, and work according to each of the three modes of material nature.One attains perfection by doing one’s own work, not another’s, as prescribed duties are never affected by sinful reactions. Thus one should work as a matter of duty, without attachment or expectation of result. One should never give up one’s duty.The highest platform of self-realization is pure devotional service to Krishna. Accordingly, Krishna advises Arjuna to always depend on Him, work under His protection, and be conscious of Him. If Arjuna refuses to fight for Krishna, he will still be dragged into warfare as it is his nature as a ksatriya to fight. Nonetheless, he is free to decide what he wants to do.By Krishna’s grace, Arjuna’s illusion and doubt vanish, and he chooses to fight according to Krishna’s directions.",
-        "image": "https://live.staticflickr.com/65535/53499752183_7dd3f80305_n.jpg",
+        "image": "https://live.staticflickr.com/65535/53502400771_54fc91dd20_n.jpg",
         "price": "3,895"
     }
 

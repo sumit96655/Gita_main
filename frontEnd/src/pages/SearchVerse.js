@@ -1,55 +1,4 @@
-// import React, {useState} from 'react'
-// import './pdf.css';
-// // import { Document,Page } from 'react-pdf';
 
-// import { Document, Page, pdfjs } from 'react-pdf';
-// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
-// // import { Document, Page } from 'react-pdf';
-
-
-// function SearchVerse() {
-
-//   const [numPages, setNumPages] = useState(null);
-//   const [pageNumber, setPageNumber] = useState(1);
-
-//   function onDocumentLoadSuccess({numPages}){
-//     setNumPages(numPages);
-//     setPageNumber(1);
-//   }
-
-//   function changePage(offSet){
-//     setPageNumber(prevPageNumber => prevPageNumber + offSet);
-//   }
-
-//   function changePageBack(){
-//     changePage(-1)
-//   }
-
-//   function changePageNext(){
-//     changePage(+1)
-//   }
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <Document file="./gita.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-//           <Page height="600" pageNumber={pageNumber} />
-//         </Document>
-//         <p> Page {pageNumber} of {numPages}</p>
-//         { pageNumber > 1 && 
-//         <button onClick={changePageBack}>Previous Page</button>
-//         }
-//         {
-//           pageNumber < numPages &&
-//           <button onClick={changePageNext}>Next Page</button>
-//         }
-//       </header>
-   
-//     </div>
-//   );
-// }
-
-// export default SearchVerse;
 import React, { useCallback, useState } from 'react';
 import { useResizeObserver } from '@wojtekmaj/react-hooks';
 import { pdfjs, Document, Page } from 'react-pdf';
@@ -63,6 +12,8 @@ import { SearchBar } from '../SearchBar';
 import { SearchResultsList } from '../SearchResultList';
 import { Link } from 'react-router-dom';
 
+import { PDFDownloadLink } from '@react-pdf/renderer';
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 const options = {
@@ -75,7 +26,7 @@ const resizeObserverOptions = {};
 const maxWidth = 800;
 
 const Sample = () => {
-  const [file, setFile] = useState('./gita.pdf');
+  const [file, setFile] = useState('./gita3.pdf');
   const [numPages, setNumPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [containerRef, setContainerRef] = useState(null);
@@ -146,14 +97,15 @@ const Sample = () => {
         <SearchBar setResults={setResults} />
         {results && results.length > 0 && <SearchResultsList results={results} />}
         <div className='flex justify-evenly mt-20 '>
-          <Link to='/home' className='bg-black shadow-lg shadow-black  active:shadow-lg text-white p-12 rounded-xl text-2xl w-40'>ChatBot</Link>
-          <Link to='/reports' className='bg-black shadow-lg shadow-black  active:shadow-lg text-white p-12  rounded-xl text-2xl w-40'>Chapter Summary</Link>
+          <Link to='/home' className='bg-black shadow-lg shadow-black  active:shadow-lg text-white pt-14 pb-12 pl-8 rounded-xl text-2xl w-40'>ChatBot</Link>
+          <Link to='/reports' className='bg-black shadow-lg shadow-black  active:shadow-lg text-white pt-12 pb-12 pl-8 rounded-xl text-2xl w-40'>Chapter Summary</Link>
           {/* <button className='bg-black shadow-lg shadow-black  active:shadow-lg text-white p-12 rounded-xl'>Discussion Forum</button> */}
           
           
         </div>
       </div>
       </div>
+      
   );
 };
 
