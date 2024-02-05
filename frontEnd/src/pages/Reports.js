@@ -14,11 +14,14 @@ import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
 import Tours from './Tours';
 import './summary.css';
+// import backgroundImage from './bg2.jpg';
+// import '../background.css'
 
 const url = 'http://localhost:5000/tours';
 //mongodb://localhost:27017
 
 const Reports = () => {
+  
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
 
@@ -56,7 +59,7 @@ const Reports = () => {
     return (
       <main>
         <div className="title">
-          <h2>no tours left</h2>
+          <h2>Failed to Load</h2>
           <button className="btn" onClick={() => fetchTours()}>
             refresh
           </button>
@@ -64,11 +67,23 @@ const Reports = () => {
       </main>
     );
   }
+  // const setBackgroundImage = () => {
+  //   const backgroundStyle = {
+  //     backgroundImage: `url(${backgroundImage})`,
+  //     backgroundSize: 'cover',
+      
+  //     backgroundPosition: 'center',
+  //   //   filter: 'blur(4px)', // Adding a blur effect
+  //   };
+  //   return backgroundStyle;
+  // }
 
   return (
-    <main>
+    <div >
+    <main >
       <Tours tours={tours} removeTour={removeTour} />
     </main>
+    </div>
   );
 };
 

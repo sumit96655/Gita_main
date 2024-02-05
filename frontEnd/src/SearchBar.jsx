@@ -43,13 +43,18 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { SearchResult } from "./SearchResult"; // Import the SearchResult component
 import "./SearchBar.css";
+import Loading from "./pages/Loading";
 
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
   const [results, setInternalResults] = useState([]); // Use internal state to manage results
+  const [loading, setLoading] = useState(false);
 
   const fetchData = async (value) => {
     try {
+
+      setLoading(true); 
+
       const formData = new FormData();
       formData.append('question', value);
 
@@ -68,14 +73,16 @@ export const SearchBar = ({ setResults }) => {
       } else {
         setInternalResults([json.answer]); // Wrap the non-array answer in an array
       }
+      setLoading(false); 
     } catch (error) {
       console.error("Error fetching data from the server:", error);
+      setLoading(false);
     }
   };
 
   const renderResults = () => {
     return results.map((result, index) => (
-      <div key={index}>
+      <div key={index} className="bg-slate-600 p-6 rounded-lg text-white mt-5">
         {/* Assuming 'answer' is a string, render it directly */}
         {result && typeof result.answer === 'string' ? result.answer : ""}
       </div>
@@ -96,7 +103,7 @@ export const SearchBar = ({ setResults }) => {
     <div>
       <div className="input-wrapper">
         <FaSearch id="search-icon" />
-        <input
+        <input className="S-input"
           placeholder="Type to search..."
           value={input}
           onChange={(e) => handleChange(e.target.value)}

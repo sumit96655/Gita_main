@@ -55,7 +55,7 @@ const Login = () => {
           </a>
         </div>
         <div
-          className="w-[90%] md:w-full bg-purple-300
+          className="w-[90%] md:w-full bg-slate-800 fill-transparent
            border
           px-6 py-4 mt-6 overflow-hidden
          shadow-md sm:max-w-md rounded-lg"
@@ -65,7 +65,7 @@ const Login = () => {
               <label
                 htmlFor="email"
                 className="block text-sm font-medium 
-                text-purple-950 "
+                text-white"
               >
                 Email
               </label>
@@ -81,7 +81,7 @@ const Login = () => {
               <label
                 htmlFor="password"
                 className="block text-sm 
-                font-medium text-purple-950 "
+                font-medium text-white "
               >
                 Password
               </label>

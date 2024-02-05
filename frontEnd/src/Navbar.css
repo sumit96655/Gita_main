@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 .navbar {
-    background-color: #060b26;
+    /* background-color: #060b26; */
+    background-color: #6c4f0f;
+    /* background-color: #836013; */
+
     height: 80px;
     display: flex;
     /* justify-content: start; */

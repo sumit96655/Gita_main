@@ -65,6 +65,17 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  background: hsla(23, 95%, 67%, 1);
+
+background: linear-gradient(360deg, hsla(23, 95%, 67%, 1) 0%, hsla(23, 95%, 67%, 1) 0%, hsla(29, 96%, 90%, 1) 38%, hsla(71, 29%, 88%, 1) 65%, hsla(187, 62%, 78%, 1) 100%);
+
+background: -moz-linear-gradient(0deg, hsla(23, 95%, 67%, 1) 0%, hsla(23, 95%, 67%, 1) 0%, hsla(29, 96%, 90%, 1) 38%, hsla(71, 29%, 88%, 1) 65%, hsla(187, 62%, 78%, 1) 100%);
+
+background: -webkit-linear-gradient(0deg, hsla(23, 95%, 67%, 1) 0%, hsla(23, 95%, 67%, 1) 0%, hsla(29, 96%, 90%, 1) 38%, hsla(71, 29%, 88%, 1) 65%, hsla(187, 62%, 78%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FB995C", endColorstr="#FB995C", GradientType=1 );
+
+
 }
 
 ul {

@@ -8,6 +8,10 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 import { ThemeProvider } from 'styled-components';
+// import BotJpg from '\\bot2.png';
+import backgroundImage from './pages/bg2.jpg'
+import BackgroundImage from './pages/bg5.jpg';
+import './background.css';
 
 // font - family: -apple - system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -16,13 +20,15 @@ import { ThemeProvider } from 'styled-components';
 const theme = {
   background: '#f5f8fb',
   fontFamily: 'sans-serif',
-  headerBgColor: '#6C22A6',
+  headerBgColor: '#6c4f0f',
   headerFontColor: '#fff',
-  headerFontSize: '15px',
-  botBubbleColor: '#6C22A6',
-  botFontColor: '#fff',
+  headerFontSize: '20px',
+  botBubbleColor: 'white',
+  botFontColor: 'black',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
+  
+  
   // innerHeight:'90vh'
 };
 
@@ -48,6 +54,7 @@ const FetchAnswer = ({ steps, triggerNextStep }) => {
       console.log('Data:', data);
 
       if (response.ok) {
+        console.log('data')
         setAnswer(data.answer);
         setError(null);
         triggerNextStep({ trigger: "waiting2" });
@@ -80,7 +87,7 @@ const FetchAnswer = ({ steps, triggerNextStep }) => {
     return <p>Error: {error}</p>;
   }
 
-  return <p style={{ color: 'white' }}>{answer.answer}</p>;
+  return <p style={{ color: 'black' }}>{answer.answer}</p>;
 };
 
 const steps = [
@@ -124,24 +131,32 @@ const steps = [
     // waitAction: true,
     // trigger: 'waiting2'
   },
-
-
-
+  
+  
 ];
 
+const chatBotStyle = {
+  backgroundImage: `url(${BackgroundImage})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  bbackgroundRepeat: 'no-repeat',
+  width:'70vw',
+  height:'auto',
+};
 function ChatBotPage() {
+
 
 
   // { width: '60vw', height: 'auto'}
   return (
-    <>
-      <div className='chat-wrapper flex items-center justify-center'>
+    <div className=''>
+      <div className='chat-wrapper flex items-center justify-center mt-28' >
         <ThemeProvider theme={theme} >
-          <ChatBot steps={steps} style={{width:'60vw', height:'auto'}} />
+          <ChatBot steps={steps} style={chatBotStyle} botAvatar="bot4.jpg" />
 
         </ThemeProvider>
       </div>
-    </>
+    </div>
   )
 }
 

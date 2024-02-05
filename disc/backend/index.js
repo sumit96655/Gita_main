@@ -121,7 +121,7 @@ const tours = [
         "id": "Chapter 15",
         "name": "Chapter 15: The Yoga of the Supreme Person",
         "info": "The “tree” of this material world is but a reflection of the real “tree”, the spiritual world. Just as a tree’s reflection is situated on water, the material reflection of the spiritual world is situated on desire, and no one knows where it begins or ends. This reflected tree is nourished by the three modes of material nature. Its leaves are the Vedic hymns, and its twigs are the objects of the senses. One who wants to disentangle himself from this tree must cut it down with the weapon of detachment and seek shelter of the Supreme Lord.Everyone in this world is fallible, but in the spiritual world everyone is infallible. And beyond all others is the Supreme Person, Krishna.Everyone in this world is fallible, but in the spiritual world everyone is infallible. And beyond all others is the Supreme Person, Krishna.",
-        "image": "https://www.course-api.com/images/tours/tour-2.jpeg",
+        "image": "https://live.staticflickr.com/65535/53510028051_871ed15b2e.jpg",
         "price": "3,895"
     },
     {

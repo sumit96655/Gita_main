@@ -1,6 +1,6 @@
 .input-wrapper {
     width: 100%;
-    height: 2.5rem;
+    height: 3.5rem;
     border: none;
     border-radius: 10px;
     padding: 0 15px;
@@ -10,7 +10,7 @@
     align-items: center;
   }
   
-  input {
+  .S-input {
     background-color: transparent;
     border: none;
     height: 100%;

@@ -42,6 +42,6 @@ def get_response_from_query(db, query,k=2):
     qa = ConversationalRetrievalChain.from_llm(ChatOpenAI(), retriever)
     # query = "What is the total number of AI publications?"
     result = qa({"question": query, "chat_history": chat_history})
-    # chat_history.append()
+    # chat_history.append(result)
 
     return result
