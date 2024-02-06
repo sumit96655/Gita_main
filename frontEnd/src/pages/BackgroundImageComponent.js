@@ -1,7 +1,7 @@
 import React from 'react';
 import Typist from 'react-typist';
 import './BackgroundImageComponent.css'; // Import the CSS file for styling
-import backgroundImage from './krishna4.jpg'; // Replace 'yourImage.jpg' with the actual filename
+import backgroundImage from './gita2.jpeg'; // Replace 'yourImage.jpg' with the actual filename
 import { useEffect } from 'react';
 import NavbarHome from '../NavbarHome';
 import '../NavbarHome.css';
@@ -25,6 +25,8 @@ const BackgroundImageComponent = () => {
     'Vibrant community support',
     'Download your favorite verses',
     'Interactive chat with wisdom',
+ 
+    
   ];
 
   const setBackgroundImage = () => {
@@ -71,7 +73,7 @@ const BackgroundImageComponent = () => {
     </div>
     {/* <br></br> */}
     <div className="features-container">
-      <div className="features text-white">
+      <div className="features text-black">
         <h2>Key Features</h2>
         <ul>
           {features.map((feature, index) => (

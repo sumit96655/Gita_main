@@ -3,6 +3,7 @@ import React from "react";
 import upload from "../utils/upload";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import backgroundImage from './bg6.jpg';
 // import { useHistory } from "react-router-dom";
 
 const Register = () => {
@@ -74,8 +75,19 @@ const Register = () => {
     }
     toast.success("File Uploaded");
   };
+  const setBackgroundImage = () => {
+    const backgroundStyle = {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      
+      backgroundPosition: 'center',
+    //   filter: 'blur(4px)', // Adding a blur effect
+    };
+    return backgroundStyle;
+  }
+
   return (
-    <div className="">
+    <div className="" style={setBackgroundImage()}>
       <Toaster />
       <div
         className="

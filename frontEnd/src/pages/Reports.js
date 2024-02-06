@@ -14,7 +14,8 @@ import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
 import Tours from './Tours';
 import './summary.css';
-// import backgroundImage from './bg2.jpg';
+import backgroundImage from './bg8.png';
+import '../background.css';
 // import '../background.css'
 
 const url = 'http://localhost:5000/tours';
@@ -67,21 +68,21 @@ const Reports = () => {
       </main>
     );
   }
-  // const setBackgroundImage = () => {
-  //   const backgroundStyle = {
-  //     backgroundImage: `url(${backgroundImage})`,
-  //     backgroundSize: 'cover',
+  const setBackgroundImage = () => {
+    const backgroundStyle = {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
       
-  //     backgroundPosition: 'center',
-  //   //   filter: 'blur(4px)', // Adding a blur effect
-  //   };
-  //   return backgroundStyle;
-  // }
+      backgroundPosition: 'center',
+    //   filter: 'blur(4px)', // Adding a blur effect
+    };
+    return backgroundStyle;
+  }
 
   return (
-    <div >
-    <main >
-      <Tours tours={tours} removeTour={removeTour} />
+    <div  style={setBackgroundImage()} >
+    <main className='bg-transparent'>
+      <Tours tours={tours} removeTour={removeTour}  />
     </main>
     </div>
   );

@@ -60,7 +60,7 @@ import Notfound from './components/Notfound';
 import BackgroundImageComponent from './pages/BackgroundImageComponent';
 import Footer from './pages/Footer';
 import App2 from './App2';
-
+import backgroundImage from './pages/bg6.jpg';
 // app1 imports
 // import Navbar from './Navbar';
 import Home from './pages/Home';
@@ -116,9 +116,21 @@ const Layout = () => {
     getUsers();
   }, [socket]);
 
+  const setBackgroundImage = () => {
+    const backgroundStyle = {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      
+      backgroundPosition: 'center',
+    //   filter: 'blur(4px)', // Adding a blur effect
+    };
+    return backgroundStyle;
+  }
+
+
   return (
     <QueryClientProvider client={queryClient} contextSharing={true}>
-      <div className="">
+      <div style={setBackgroundImage()}>
         {/* <Navbar /> */}
         <div className="w-screen h-screen flex justify-center items-start px-4 md:px-12 pt-12 ">
           <Sidebar />

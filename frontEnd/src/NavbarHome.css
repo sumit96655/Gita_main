@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbarHome {
-    background-color: black;
+    background:  #34271e;
     height: 80px;
     display: flex;
     justify-content: start;

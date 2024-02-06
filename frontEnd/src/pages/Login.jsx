@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import backgroundImage from './bg6.jpg';
 // import { useHistory } from "react-router-dom";
 
 const Login = () => {
@@ -40,8 +41,19 @@ const Login = () => {
       }
     }
   };
+  const setBackgroundImage = () => {
+    const backgroundStyle = {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      
+      backgroundPosition: 'center',
+    //   filter: 'blur(4px)', // Adding a blur effect
+    };
+    return backgroundStyle;
+  }
+
   return (
-    <div className="h-screen w-screen ">
+    <div className="h-screen w-screen " style={setBackgroundImage()}>
       <Toaster />
       <div
         className=" flex flex-col items-center  min-h-screen pt-6 

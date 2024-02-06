@@ -14,12 +14,12 @@ const Tours = ({ tours, removeTour }) => {
     //   </div>
     // </section>
 
-    <div>
+    <div className='relative'>
       <section className='section'>
         <div className="title">
           <h2>Chapter Summary</h2>
           <div className="underline2"></div>
-        </div>
+        </div> 
         <div className='section-container'>
           {tours.map((tour) => {
             return <Tour key={tour.id} {...tour} removeTour={removeTour} />;

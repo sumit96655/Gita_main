@@ -11,6 +11,7 @@ import { SearchBar } from '../SearchBar';
 import { SearchResultsList } from '../SearchResultList';
 import { Link } from 'react-router-dom';
 import Loading from './Loading';
+import backgroundImage from './bg6.jpg';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
@@ -69,9 +70,20 @@ const Sample = () => {
   };
 
   const [results, setResults] = useState([]);
+  const setBackgroundImage = () => {
+    const backgroundStyle = {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      
+      backgroundPosition: 'center',
+    //   filter: 'blur(4px)', // Adding a blur effect
+    };
+    return backgroundStyle;
+  }
+
   
   return (
-    <div className='flex justify-around'>
+    <div className='flex justify-around'style={setBackgroundImage()} >
       <div className='flex flex-col mt-20 space-y-3 '>
         <label className='font-bold text-xl'>SELECT LANGUAGE</label>
           <button onClick={() => handlePdfButtonClick(1)} className='bg-black text-white rounded-xl text-lg w-28'>English</button>

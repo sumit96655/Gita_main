@@ -142,14 +142,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: black;
+    background-color: palegoldenrod;
   }
   
   .features {
-    text-align: left;
-    max-width: 50%;
+    text-align: center;
+    max-width: 80%;
     margin-bottom: 20px;
     color: #fff; /* Set the text color */
+
   }
   
   .features h2 {
@@ -161,16 +162,19 @@
   .features ul {
     list-style-type: none;
     padding-left: 60px;
+    display: flex;
+    justify-content: space-evenly;
     
   }
   
   .features li {
-    margin-bottom: 8px;
-    padding: 5px;
+    margin: 8px;
+    padding: 25px;
     border-radius: 10px;
     /* background-color: rgb(122, 0, 122); */
-    background-color: rgb(224, 154, 5);
-    color: black;
+    /* background-color: rgb(224, 154, 5); */
+    background-color: rgb(4, 56, 85);
+    color: white;
     font-weight:bold;
   }
   

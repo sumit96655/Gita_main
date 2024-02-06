@@ -31,7 +31,7 @@ function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <div className='navbar justify-between left-0 right-0 z-10 px-4'>
+        <div className='navbar justify-between left-0 right-0 z-10 '>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
