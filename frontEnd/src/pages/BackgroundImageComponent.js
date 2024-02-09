@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import NavbarHome from '../NavbarHome';
 import '../NavbarHome.css';
 import { Link } from 'react-router-dom';
+import { FaBeer, FaCoffee, FaBook, FaCode } from 'react-icons/fa';
  
 const BackgroundImageComponent = () => {
   const typingText = "Welcome to GitaSoulConnect.."; // Change this to your desired intro text
@@ -16,6 +17,26 @@ const BackgroundImageComponent = () => {
     "Daily Enlightenment: Unveil Today's Sacred Verse!",
     "Journey Through Wisdom: Unveiling the Essence of Bhagavad Gita's Chapters",   
   ];
+
+//   const features = [
+//     {
+//         label: "Click, read, and let the adventure feed your need!",
+//         icon: <FaBeer />,
+//     },
+//     {
+//         label: "Click to Connect: Where Ideas Collide and Conversations Take Flight!",
+//         icon: <FaCoffee />,
+//     },
+//     {
+//         label: "Daily Enlightenment: Unveil Today's Sacred Verse!",
+//         icon: <FaBook />,
+//     },
+//     {
+//         label: "Journey Through Wisdom: Unveiling the Essence of Bhagavad Gita's Chapters",
+//         icon: <FaCode />,
+//     },
+// ];
+
 
   const setBackgroundImage = () => {
     const backgroundStyle = {
@@ -65,15 +86,31 @@ const BackgroundImageComponent = () => {
         </ul>
       </div>
       <div className="chatbot-icon">
-        {/* Add your chatbot icon or button component here */}
+        
         <Link to='/home' className='Chatbot'><img src={require('./cudie.png')} alt="Chatbot" /></Link>
 
       </div>
+      {/* <div className="features text-black">
+      <h2>Key Features</h2>
+      
+   {features.map((feature, index) => (
+        <div className="feature-item" key={index}>
+            <div className="icon">{feature.icon}</div>
+            <p>{feature.label}</p>
+        </div>
+    ))}
     </div>
+    <div className="chatbot-icon">
+        
+        <Link to='/home' className='Chatbot'><img src={require('./cudie.png')} alt="Chatbot" /></Link>
+
+      </div>  */}
+    </div>
+    
       </div>
       
     </div>
-    {/* <br></br> */}
+   
     </>
   );
 };
