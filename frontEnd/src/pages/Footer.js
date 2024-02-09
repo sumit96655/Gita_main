@@ -45,11 +45,11 @@ import {
                 className="w-16 h-auto"
               />
               <span className="text-3xl font-bold pl-2 text-white">
-                GeetaSoulConnect
+                GitaSoulConnect
               </span>
             </div>
             <div className="infos text-gray-400 py-5">
-            <span>Copyright © {currentYear} GeetaSoulConnect.</span>
+            <span>Copyright © {currentYear} GitaSoulConnect.</span>
               <span>All rights reserved</span>
             </div>
             <div className="footer-icons flex items-center space-x-3 py-8">

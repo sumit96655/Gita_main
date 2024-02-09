@@ -18,8 +18,6 @@ const tours = [
         "info": "Two armies, those of the Pandavas and the Kauravas, face each other on the Battlefield of Kurukshetra. Many signs indicate victory for the Pandavas. Dhrtarashtra, the Pandavas’ uncle and the Kauravas’ father, doubts the possibility of his sons’ victory and asks Sanjaya, his secretary, to describe the scene on the battlefield.Arjuna, one of five Pandava brothers, undergoes a crisis just before the fight. He is overwhelmed by compassion for his family members and teachers, whom he is supposed to kill. After submitting before Krishna many noble and moral reasons why he wishes not to fight, Arjuna casts aside his weapons, overwhelmed with grief. Arjuna’s reluctance to fight indicates his kind heart; such a person is fit to receive transcendental knowledge.",
         "image": "https://live.staticflickr.com/65535/53496766582_cac2637d89.jpg",
         "price": "3,895"
-        // src="//live.staticflickr.com/65535/53490339259_c1f941895c_w.jpg"
-        // src="//live.staticflickr.com/65535/53496766582_cac2637d89.jpg"
     },
     {
         "id": "02",
@@ -27,16 +25,13 @@ const tours = [
         "info": "Krishna does not sympathize with Arjuna’s arguments. Rather, He reminds Arjuna that his duty is to fight and orders him to overcome his weakness of heart. Arjuna is torn between his aversion to killing his relatives and Krishna’s desire that he should fight. Aggrieved and confused, Arjuna asks Krishna for guidance and becomes his disciple.Krishna takes up the role of Arjuna’s Spiritual Master and teaches him that the soul is eternal and cannot be killed. Dying in battle promotes a fighter to the heavenly planets, so Arjuna should rejoice that those persons he is about to kill will achieve superior births. A person is eternally an individual. Only his body perishes. Thus, there is nothing to lament.Arjuna’s decision not to fight is based on his desire to enjoy life with his relatives, even at the cost of wisdom and duty. Such a mentality keeps one bound to the material world. Krishna advises Arjuna to engage in buddhi-yoga, work without attachment to the results. By fighting in this way, Arjuna will free himself from the cycle of birth and death and become eligible to enter the kingdom of God.",
         "image": "https://live.staticflickr.com/65535/53497650061_b4905c4d8a_w.jpg",
         "price": "3,895"
-        // src="//live.staticflickr.com/65535/53497650061_b4905c4d8a_w.jpg"
     },
-    // },<a data-flickr-embed="true" href="https://www.flickr.com/photos/200035685@N08/53490339259/" title="WhatsApp Image 2024-01-27 at 01.16.16_08ffd4ec"><img src="https://live.staticflickr.com/65535/53490339259_c1f941895c_b.jpg" width="1024" height="1024" alt="WhatsApp Image 2024-01-27 at 01.16.16_08ffd4ec"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
     {
         "id": "03",
         "name": "Chapter 3: Karma – Yoga",
         "info": "Arjuna is still confused. He thinks that buddhi-yoga means that one should retire from active life and practice penance and austerities. But Krishna says, “no. Fight! But do it in a spirit of renunciation and offer all the results to the Supreme. This is the best purification. By working without attachment, one attains the Supreme.”Performing sacrifices for the pleasure of the Lord guarantees material prosperity and freedom from sinful reactions. Even a self-realized person never gives up his duty. He acts for the sake of educating others.Arjuna then asks the Lord what it is that causes one to engage in sinful acts. Krishna answers that it is lust which induces one to sin. This lust bewilders one and entangles one in the material world. Lust presents itself in the senses, mind, and intelligence, but it can be counteracted by self – control.",
         "image": "https://live.staticflickr.com/65535/53496766602_bf797954f6_w.jpg",
         "price": "1,995"
-        // src="//live.staticflickr.com/65535/53496766602_bf797954f6_w.jpg"
     },
     {
         "id": " 04",
@@ -44,7 +39,6 @@ const tours = [
         "info": "The science of Bhagavad – gita was first spoken by Krishna to Vivasvan, the sun-god. Vivasvan taught the science to his descendents, who taught it to humanity. This system of transmitting knowledge is called disciplic succession.Whenever and wherever there is a decline in religion and a rise of irreligion, Krishna appears in His Original Transcendental Form, untouched by material nature. One who understands the transcendental nature of the Lord attains the Lord’s eternal abode at the time of death.Everyone surrenders to Krishna, directly or indirectly, and Krishna reciprocates according to one’s surrender.Krishna created a system called varnasrama, with divisions of social and spiritual life, to engage people according to their psychophysical natures. By sacrificing the results of work to the Supreme, people gradually rise to the platform of transcendental knowledge. Ignorant and faithless people who doubt the revealed knowledge of the scriptures can never be happy, nor attain God Consciousness.",
         "image": "https://live.staticflickr.com/65535/53498114135_ca90a8814d.jpg",
         "price": "3,895"
-        // src="//live.staticflickr.com/65535/53498114135_ca90a8814d.jpg"
     },
     {
         "id": "05",
@@ -59,7 +53,6 @@ const tours = [
         "info": "The process of mystic yoga entails cessation of material activities. Yet the true mystic is not he who performs no duty. A real yogi works according to duty, without attachment to results or a desire for sense gratification. Real yoga entails meeting the Supreme Soul within the heart and following His dictation. This is achieved with the help of a controlled mind. Through knowledge and realization, one becomes unaffected by the dualities of material existence (heat and cold, honor and dishonor, etc.). By regulation of eating, sleeping, work, and recreation, the yogi gains control over his body, mind and activities and becomes steady in his meditation on the transcendent self. Ultimately, he achieves Samadhi, characterized by the ability to relish transcendental pleasure through transcendental sense. The highest yogi is he who always thinks of Krishna, the Supreme Soul",
         "image": "https://live.staticflickr.com/65535/53496812232_66b8e1aa11_n.jpg",
         "price": "3,895"
-        // src="//live.staticflickr.com/65535/53496812232_66b8e1aa11_n.jpg"
     },
     {
         "id": "07",
@@ -397,8 +390,6 @@ io.on("connection", (socket) => {
   socket.on("join-room", ({ room, user }) => {
     users[user._id] = user;
     socket.join(room);
-
-    // socket.broadcast.to(room).emit("user-connected", users);
   });
 
   socket.on("send-message", ({ message, room, user }) => {

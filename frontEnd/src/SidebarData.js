@@ -6,6 +6,7 @@ import {RiRobot2Line} from 'react-icons/ri';
 import {TiMessages} from 'react-icons/ti';
 import {IoSearchSharp} from 'react-icons/io5';
 import { GrChapterAdd } from "react-icons/gr";
+import {CiSignpostDuo1} from 'react-icons/ci';
 
 export const SidebarData = [
   {
@@ -39,40 +40,10 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Team',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople />,
-    cName: 'nav-text'
-  },
-  {
     title: 'Daily Verse',
     path: '/DailyVerse',
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <CiSignpostDuo1 />,
     cName: 'nav-text'
   },
-  {
-    title: 'Stories and Animation',
-    path: '/StoriesandAnimation',
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Like minded people community',
-    path: '/Likemindedpeoplecommunity',
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Your Downloads',
-    path: '/YourDownloads',
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Additional Settings',
-    path: '/AdditionalSettings',
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: 'nav-text'
-  },
-
+  
 ];

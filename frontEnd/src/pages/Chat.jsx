@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { io } from "socket.io-client";
+import { Socket, io } from "socket.io-client";
 import Write from "../icons/Write";
 import Send from "../icons/Send";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,7 @@ import _, { set } from "lodash";
 import moment from "moment";
 import { socket } from "../App";
 import { useSelector } from "react-redux";
+import backgroundImage from './bg18.png';
 
 const discussionTopics = [
   "technology",
@@ -44,12 +45,17 @@ const Chat = () => {
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
     socket.connect();
+
+    
     socket.emit("join-room", {
       room: room,
       user: JSON.parse(localStorage.getItem("user")),
     });
-
+    
+    console.log("Sent 'join-room' event");
+    
     socket.on("receive-message", ({ message, room, user }) => {
+      console.log("Socket connected",socket.connected)
       console.log("message", message, room, user);
       setMessages((prev) => {
         console.log("prev", prev[room]);
@@ -60,9 +66,12 @@ const Chat = () => {
       });
       console.log("messages", messages);
     });
-  }, [socket]);
-
-  const handleClick = () => {
+    return()=>{
+      socket.disconnect();
+    };
+  }, [room]);
+  
+  const handleClick = (e) => {
     socket.emit("send-message", {
       message: message,
       room: room,
@@ -70,26 +79,40 @@ const Chat = () => {
     });
     setMessage("");
   };
+  const onKeyPress= (e)=>{
+    if(e.key==='Enter'){
+      handleClick();
+    }
+  }
 
+  const setBackgroundImage = () => {
+    const backgroundStyle = {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      
+      backgroundPosition: 'center',
+    };
+    return backgroundStyle;
+  }
   return (
     <div
       className="h-full overflow-y-hidden w-full md:w-[60%] flex  
-    flex-col items-center gap-4 "
+    flex-col items-center gap-4" 
     >
       <div
         className="w-full md:w-[80%]
       text-sm md:text-base
-      flex justify-between items-center "
+      flex justify-between items-center " 
       >
-        <h1 className="flex gap-4 text-sm md:text-base text-inherit">
+        <h1 className="flex gap-4 text-sm md:text-base text-inherit font-bold">
           Online Users
-          <span className="text-purple-600 text-sm flex gap-2">
+          <span className="text-gray-600 text-sm flex gap-2">
             {" "}
             {onlineUsers.map((user) => {
               return (
                 <img
                   alt="profile"
-                  className="rounded-full h-6 md:h-8 w-6 md:w-8 bg-purple-100 flex items-center justify-center gap-2"
+                  className="rounded-full h-6 md:h-8 w-6 md:w-8 bg-gray-700 flex items-center justify-center gap-2"
                   src={user.profileImage}
                 />
               );
@@ -104,7 +127,7 @@ const Chat = () => {
       {/* // chat box */}
       <div
         className="w-full relative border-2 overflow-y-scroll 
-      p-3 px-2 md:p-4 rounded-md md:w-[80%] h-[90%] md:h-[80%] flex flex-col"
+      p-3 px-2 md:p-4 rounded-md md:w-[80%] h-[90%] md:h-[80%] flex flex-col bg-[#80808081] " style={setBackgroundImage()}
       >
         {messages &&
           Object.entries(messages).map(([key, value]) => {
@@ -120,13 +143,13 @@ const Chat = () => {
                       >
                         <div
                           className={
-                            " text-sm md:text-base text-white bg-purple-400 py-2 px-3 rounded-md " +
-                            (user?._id === msg.user._id ? " bg-purple-600" : "")
+                            " text-sm md:text-base text-white bg-gray-900 py-2 px-3 rounded-md " +
+                            (user?._id === msg.user._id ? " bg-gray-900" : "")
                           }
                         >
                           {msg.message}
                         </div>
-                        <span className="text-xs text-gray-500">
+                        <span className="text-xs text-gray-900">
                           {msg.user._id === user?._id
                             ? "(You) "
                             : msg.user.name + " "}
@@ -142,15 +165,16 @@ const Chat = () => {
         <div
           className="w-full 
       mt-auto 
-         bg-purple-600  
+      bg-gray-900  
         flex 
         items-center gap-2
         px-2 md:px-5 py-1 md:py-2 rounded-lg shadow-md  "
         >
           <Write />
-          <div className="flex-grow w-full">
+          <div className="flex-grow w-full ">
             <input
               onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={onKeyPress} 
               className="w-full h-8 border-none outline-none 
           rounded-md py-1 px-2 "
               type="text"

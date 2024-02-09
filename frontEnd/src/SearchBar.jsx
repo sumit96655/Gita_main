@@ -1,65 +1,24 @@
-// import { useState } from "react";
-// import { FaSearch } from "react-icons/fa";
-
-// import "./SearchBar.css";
-
-// export const SearchBar = ({ setResults }) => {
-//   const [input, setInput] = useState("");
-
-//   const fetchData = (value) => {
-//     fetch("https://jsonplaceholder.typicode.com/users")
-//       .then((response) => response.json())
-//       .then((json) => {
-//         const results = json.filter((user) => {
-//           return (
-//             value &&
-//             user &&
-//             user.name &&
-//             user.name.toLowerCase().includes(value)
-//           );
-//         });
-//         setResults(results);
-//       });
-//   };
-
-//   const handleChange = (value) => {
-//     setInput(value);
-//     fetchData(value);
-//   };
-
-//   return (
-//     <div className="input-wrapper ">
-//       <FaSearch id="search-icon" />
-//       <input
-//         placeholder="Type to search..."
-//         value={input}
-//         onChange={(e) => handleChange(e.target.value)}
-//       />
-//     </div>
-//   );
-// };
-
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { SearchResult } from "./SearchResult"; // Import the SearchResult component
 import "./SearchBar.css";
-import Loading from "./pages/Loading";
+import "./loader.css";
 
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
-  const [results, setInternalResults] = useState([]); // Use internal state to manage results
+  const [results, setInternalResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  
 
   const fetchData = async (value) => {
     try {
-
-      setLoading(true); 
+      setLoading(true);
 
       const formData = new FormData();
-      formData.append('question', value);
+      formData.append("question", value);
 
-      const response = await fetch(`http://127.0.0.1:5000/answer_to/`, {
-        method: 'POST',
+      const response = await fetch(`http://127.0.0.1:5000/search_chapter/`, {
+        method: "POST",
         body: formData,
       });
 
@@ -71,9 +30,9 @@ export const SearchBar = ({ setResults }) => {
       if (Array.isArray(json.answer)) {
         setInternalResults(json.answer);
       } else {
-        setInternalResults([json.answer]); // Wrap the non-array answer in an array
+        setInternalResults([json.answer]);
       }
-      setLoading(false); 
+      setLoading(false);
     } catch (error) {
       console.error("Error fetching data from the server:", error);
       setLoading(false);
@@ -83,8 +42,7 @@ export const SearchBar = ({ setResults }) => {
   const renderResults = () => {
     return results.map((result, index) => (
       <div key={index} className="bg-slate-600 p-6 rounded-lg text-white mt-5">
-        {/* Assuming 'answer' is a string, render it directly */}
-        {result && typeof result.answer === 'string' ? result.answer : ""}
+        {result && typeof result.answer === "string" ? result.answer : ""}
       </div>
     ));
   };
@@ -94,7 +52,7 @@ export const SearchBar = ({ setResults }) => {
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       fetchData(input);
     }
   };
@@ -103,17 +61,25 @@ export const SearchBar = ({ setResults }) => {
     <div>
       <div className="input-wrapper">
         <FaSearch id="search-icon" />
-        <input className="S-input"
+        <input
+          className="S-input"
           placeholder="Type to search..."
           value={input}
           onChange={(e) => handleChange(e.target.value)}
           onKeyPress={(e) => handleKeyPress(e)}
         />
       </div>
-
-      {/* Render SearchResults */}
       <div>
-        {renderResults()}
+        {/* Render search results or loader based on loading state */}
+        {loading ? (
+          <div className="loader-container">
+            <div className="loader">
+              <div className="jimu-primary-loading"></div>
+            </div>
+          </div>
+        ) : (
+          renderResults()
+        )}
       </div>
     </div>
   );

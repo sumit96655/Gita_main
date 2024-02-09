@@ -8,14 +8,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 import { ThemeProvider } from 'styled-components';
-// import BotJpg from '\\bot2.png';
 import backgroundImage from './pages/bg2.jpg'
 import BackgroundImage from './pages/bg5.jpg';
 import './background.css';
-
-// font - family: -apple - system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-//   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-//   sans - serif;
 
 const theme = {
   background: '#f5f8fb',
@@ -28,8 +23,6 @@ const theme = {
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
   
-  
-  // innerHeight:'90vh'
 };
 
 const FetchAnswer = ({ steps, triggerNextStep }) => {
@@ -45,7 +38,6 @@ const FetchAnswer = ({ steps, triggerNextStep }) => {
 
       const response = await fetch(`http://127.0.0.1:5000/answer_to/`, {
         method: 'POST',
-        // body: JSON.stringify({ question }),
         body: formData,
       });
       console.log('Response:', response);
@@ -67,15 +59,9 @@ const FetchAnswer = ({ steps, triggerNextStep }) => {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => {    
     let userQuery = '';
-    // Ensure that steps is an array
-    // Find the step with the user input in the steps array
-
-
     userQuery = steps.waiting2.value;
-    // const userQuery = userQueryStep ? userQueryStep.value : '';
-
     if (userQuery) {
       fetchAnswerFromModel(userQuery);
     } else {
@@ -91,27 +77,6 @@ const FetchAnswer = ({ steps, triggerNextStep }) => {
 };
 
 const steps = [
-  // {
-  //   id: 'Greet',
-  //   message: 'Hello , welcome to our website !!',
-  //   trigger: 'Ask Name'
-  // },
-  // {
-  //   id: 'Ask Name',
-  //   message: 'Please enter your name',
-  //   trigger: 'waiting1'
-  // },
-  // {
-  //   id: 'waiting1',
-  //   user: true,
-  //   trigger: 'Name'
-  // },
-  // {
-  //   id: 'Name',
-  //   message: 'Hi {previousValue} ,what do you wants to know about?',
-  //   // end: true
-  //   trigger: 'AskQuery'
-  // },
   {
     id: 'AskQuery',
     message: 'Hello, how can I help you?',
@@ -127,11 +92,7 @@ const steps = [
     style: { botFontColor: '#fff' },
     component: <FetchAnswer />,
     asMessage: true,
-    // user:true,
-    // waitAction: true,
-    // trigger: 'waiting2'
   },
-  
   
 ];
 
@@ -145,9 +106,13 @@ const chatBotStyle = {
 };
 function ChatBotPage() {
 
+    useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) {
+      window.location.href = "/login";
+    }
+  });
 
-
-  // { width: '60vw', height: 'auto'}
   return (
     <div className=''>
       <div className='chat-wrapper flex items-center justify-center mt-28' >
@@ -161,4 +126,3 @@ function ChatBotPage() {
 }
 
 export default ChatBotPage
-

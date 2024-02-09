@@ -3,16 +3,13 @@ import { useResizeObserver } from '@wojtekmaj/react-hooks';
 import { pdfjs, Document, Page } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
-
 import './sample.css';
 import { debounce } from 'lodash';
-
 import { SearchBar } from '../SearchBar';
 import { SearchResultsList } from '../SearchResultList';
 import { Link } from 'react-router-dom';
-import Loading from './Loading';
 import backgroundImage from './bg6.jpg';
-
+import '../loader.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 const options = {
@@ -25,7 +22,7 @@ const resizeObserverOptions = {};
 const maxWidth = 800;
 
 const Sample = () => {
-  const [file, setFile] = useState('./gita3.pdf');
+  const [file, setFile] = useState('./gita2.pdf');
   const [numPages, setNumPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [containerRef, setContainerRef] = useState(null);
@@ -63,7 +60,7 @@ const Sample = () => {
       setCurrentPage(currentPage - 1);
     }
   };
-
+  
   const handlePdfButtonClick = (pdfNumber) => {
     setSelectedPdf(pdfNumber);
     setFile(`./gita${pdfNumber}.pdf`); // Adjust the file name pattern as needed
@@ -76,23 +73,21 @@ const Sample = () => {
       backgroundSize: 'cover',
       
       backgroundPosition: 'center',
-    //   filter: 'blur(4px)', // Adding a blur effect
     };
     return backgroundStyle;
   }
 
-  
   return (
     <div className='flex justify-around'style={setBackgroundImage()} >
       <div className='flex flex-col mt-20 space-y-3 '>
         <label className='font-bold text-xl'>SELECT LANGUAGE</label>
-          <button onClick={() => handlePdfButtonClick(1)} className='bg-black text-white rounded-xl text-lg w-28'>English</button>
-          <button onClick={() => handlePdfButtonClick(2)} className='bg-black text-white rounded-xl text-lg w-28'>Hindi</button>
-          <button onClick={() => handlePdfButtonClick(3)} className='bg-black text-white rounded-xl text-lg w-28'>Marathi</button>
-          <button onClick={() => handlePdfButtonClick(4)} className='bg-black text-white rounded-xl text-lg w-28'>Sanskrit</button>
-          <button onClick={() => handlePdfButtonClick(5)} className='bg-black text-white rounded-xl text-lg w-28'>Tamil</button>
-          <button onClick={() => handlePdfButtonClick(6)} className='bg-black text-white rounded-xl text-lg w-28'>Bengali</button>
-          <button onClick={() => handlePdfButtonClick(7)} className='bg-black text-white rounded-xl text-lg w-28'>Kannada</button>
+          <button onClick={() => handlePdfButtonClick(1)} className='bg-[#4e3807] text-white rounded-lg text-lg w-28'>English</button>
+          <button onClick={() => handlePdfButtonClick(2)} className='bg-[#4e3807] text-white rounded-lg text-lg w-28'>Hindi</button>
+          <button onClick={() => handlePdfButtonClick(3)} className='bg-[#4e3807] text-white rounded-lg text-lg w-28'>Marathi</button>
+          <button onClick={() => handlePdfButtonClick(4)} className='bg-[#4e3807] text-white rounded-lg text-lg w-28'>Sanskrit</button>
+          <button onClick={() => handlePdfButtonClick(5)} className='bg-[#4e3807] text-white rounded-lg text-lg w-28'>Tamil</button>
+          <button onClick={() => handlePdfButtonClick(6)} className='bg-[#4e3807] text-white rounded-lg text-lg w-28'>Bengali</button>
+          <button onClick={() => handlePdfButtonClick(7)} className='bg-[#4e3807] text-white rounded-lg text-lg w-28'>Kannada</button>
       </div>
       <div className="Example flex ">
         <div className="Example__container">
@@ -117,11 +112,19 @@ const Sample = () => {
       </div>
       <div className="search-bar-container w-[30rem] pt-24 ">
         <SearchBar setResults={setResults} />
+        {!loading && (
+          <div className='flex mt-2 flex-col'>
+            <label className='font-bold text-lg bg-[#80808081] m-1.5 p-3 rounded-lg'>Which verse mentions about karma yoga</label>
+            <label className='font-bold text-lg bg-[#80808081] m-1.5 p-3 rounded-lg'>Duties and responsibilities</label> 
+            <label className='font-bold text-lg bg-[#80808081] m-1.5 p-3 rounded-lg'>Describes Moksh/moksha</label>
+            <label className='font-bold text-lg bg-[#80808081] m-1.5 p-3 rounded-lg'>Gives information about brahman</label>
+          </div>
+        )}
         {results && results.length > 0 && <SearchResultsList results={results} />}
-  
+
         <div className='flex justify-evenly mt-20 '>
-          <Link to='/home' className='bg-black shadow-lg shadow-black  active:shadow-lg text-white pt-14 pb-12 pl-8 rounded-xl text-2xl w-40'>ChatBot</Link>
-          <Link to='/reports' className='bg-black shadow-lg shadow-black  active:shadow-lg text-white pt-12 pb-12 pl-8 rounded-xl text-2xl w-40'>Chapter Summary</Link>
+          <Link to='/home' className='bg-[#4e3807] shadow-lg shadow-black  active:shadow-lg text-white pt-14 pb-12 pl-8 rounded-xl text-2xl w-40'>ChatBot</Link>
+          <Link to='/reports' className='bg-[#4e3807] shadow-lg shadow-black  active:shadow-lg text-white pt-12 pb-12 pl-8 rounded-xl text-2xl w-40'>Chapter Summary</Link>
         </div>
       </div>
     </div>

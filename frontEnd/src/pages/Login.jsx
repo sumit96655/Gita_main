@@ -2,12 +2,10 @@ import axios from "axios";
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import backgroundImage from './bg6.jpg';
-// import { useHistory } from "react-router-dom";
+import backgroundImage from './bg16.jpg';
 
 const Login = () => {
   const navigate = useNavigate();
-  // const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,8 +24,7 @@ const Login = () => {
       if (res.status === 200 && res.data) {
         //successful login         
         localStorage.setItem("user", JSON.stringify(res.data));
-        // navigate("/");
-        navigate("/home");
+        navigate("/SearchVerse");
         toast.success("Logged in successfully");
       } else {
         toast.error("User does not exist");
@@ -47,7 +44,6 @@ const Login = () => {
       backgroundSize: 'cover',
       
       backgroundPosition: 'center',
-    //   filter: 'blur(4px)', // Adding a blur effect
     };
     return backgroundStyle;
   }
@@ -56,18 +52,18 @@ const Login = () => {
     <div className="h-screen w-screen " style={setBackgroundImage()}>
       <Toaster />
       <div
-        className=" flex flex-col items-center  min-h-screen pt-6 
-      sm:justify-center sm:pt-0 "
+        className=" flex flex-col min-h-screen pt-6 
+      sm:pl-60 sm:pt-28"
       >
         <div className="mt-12 md:mt-0">
           <a href="/">
-            <h3 className="text-4xl font-bold text-purple-950 ">
+            <h3 className="protest-riot-regular text-5xl font-bold text-gray-950 pl-40">
               Login
             </h3>
           </a>
         </div>
         <div
-          className="w-[90%] md:w-full bg-slate-800 fill-transparent
+          className="w-[90%] md:w-full bg-slate-700 fill-transparent
            border
           px-6 py-4 mt-6 overflow-hidden
          shadow-md sm:max-w-md rounded-lg"
@@ -84,7 +80,7 @@ const Login = () => {
               <input
                 type="email"
                 name="email"
-                className="border border-purple-200 mt-2 w-full h-10 px-3 rounded 
+                className="border border-gray-200 mt-2 w-full h-10 px-3 rounded 
                     outline-none 
                        shadow-sm"
               />
@@ -100,7 +96,7 @@ const Login = () => {
               <input
                 type="password"
                 name="password"
-                className="border border-purple-200 mt-2 w-full h-10 px-3 rounded 
+                className="border border-gray-200 mt-2 w-full h-10 px-3 rounded 
                     outline-none 
                        shadow-sm"
               />
@@ -112,8 +108,8 @@ const Login = () => {
                 className="inline-flex items-center px-4 py-2 text-xs font-semibold 
                 tracking-widest 
                 text-white uppercase transition duration-150 ease-in-out 
-                bg-purple-950 border border-transparent rounded-md 
-                active:bg-gray-900 false"
+                bg-gray-950 border border-transparent rounded-md 
+                active:bg-gray-700 false"
               >
                 Login
               </button>

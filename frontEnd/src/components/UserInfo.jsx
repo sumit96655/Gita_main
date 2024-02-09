@@ -18,7 +18,7 @@ const UserInfo = ({ openId, index, setOpenId, question, answer }) => {
         />
         <h2 className="text-gray-300 text-xs">
           {answer ? "answered by\n" : "posted by "}{" "}
-          <span className="text-purple-800 font-bold  md:text-sm">
+          <span className="text-gray-800 font-bold  md:text-sm">
             {question
               ? question?.author?.name === currentUser?.name
                 ? question?.author?.name + " (You)"

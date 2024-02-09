@@ -39,7 +39,7 @@ const Myanswers = () => {
             className="w-full my-8 md:w-[80%] md:mx-12 flex flex-col items-end border 
           
           p-2
-          md:p-4 rounded-md bg-purple-100"
+          md:p-4 rounded-md bg-gray-100"
           >
             <div className="w-full bg-white p-4 md:p-5 rounded-lg shadow-md flex items-start gap-5">
               <div className="left-section space-y-1 text-center">

@@ -1,0 +1,32 @@
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .verse-container {
+    background-color: #b3ac91;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .verse-text {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+  .verse-number,
+  .explanation {
+    font-size: 1rem;
+    color: white;
+    margin-top: 10px;
+  }

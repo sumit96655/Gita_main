@@ -1,32 +1,20 @@
 import React from 'react';
 import Typist from 'react-typist';
 import './BackgroundImageComponent.css'; // Import the CSS file for styling
-import backgroundImage from './gita2.jpeg'; // Replace 'yourImage.jpg' with the actual filename
+import backgroundImage from './gita2.jpg'; // Replace 'yourImage.jpg' with the actual filename
 import { useEffect } from 'react';
 import NavbarHome from '../NavbarHome';
 import '../NavbarHome.css';
 import { Link } from 'react-router-dom';
  
 const BackgroundImageComponent = () => {
-  const typingText = "Welcome to GeetaSoulConnect.."; // Change this to your desired intro text
-
-  // useEffect(() => {
-  //   // Use querySelectorAll to get a NodeList
-  //   const navList = document.querySelectorAll('.navbar');
-    
-  //   // Loop through each element in the NodeList and add the class individually
-  //   navList.forEach(nav => {
-  //     nav.classList.add('nav-hidden');
-  //   });
-  // }, []);
+  const typingText = "Welcome to GitaSoulConnect.."; // Change this to your desired intro text
 
   const features = [
-    'Personalized spiritual guidance',
-    'Vibrant community support',
-    'Download your favorite verses',
-    'Interactive chat with wisdom',
- 
-    
+    "Click, read, and let the adventure feed your need!",
+    "Click to Connect: Where Ideas Collide and Conversations Take Flight!",
+    "Daily Enlightenment: Unveil Today's Sacred Verse!",
+    "Journey Through Wisdom: Unveiling the Essence of Bhagavad Gita's Chapters",   
   ];
 
   const setBackgroundImage = () => {
@@ -34,7 +22,6 @@ const BackgroundImageComponent = () => {
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-    //   filter: 'blur(4px)', // Adding a blur effect
     };
 
     return backgroundStyle;
@@ -42,8 +29,8 @@ const BackgroundImageComponent = () => {
 
   return (
     <>
-    <NavbarHome />
     <div className="background-container" style={setBackgroundImage()}>
+    <NavbarHome />
       <div className="content">
         <div className="intro-text">
           <h2 className="intro-header">Discover a New World</h2>
@@ -64,14 +51,10 @@ const BackgroundImageComponent = () => {
             {/* <h3>Our Mission</h3> */}
 
             <p>
-              Geetasoul Connect is your digital sanctuary for the Bhagavad Gita. Immerse yourself in the teachings, chat with wisdom, and personalize your spiritual path. Join a vibrant community, download your favorite verses, and let the Gita guide you on your journey to inner peace.
+              Gitasoul Connect is your digital sanctuary for the Bhagavad Gita. Immerse yourself in the teachings, chat with wisdom, and personalize your spiritual path. Join a vibrant community, download your favorite verses, and let the Gita guide you on your journey to inner peace.
             </p>
           </Typist>
         </div>
-      </div>
-      
-    </div>
-    {/* <br></br> */}
     <div className="features-container">
       <div className="features text-black">
         <h2>Key Features</h2>
@@ -83,10 +66,14 @@ const BackgroundImageComponent = () => {
       </div>
       <div className="chatbot-icon">
         {/* Add your chatbot icon or button component here */}
-        <Link to='/home' className='Chatbot'><img src={require('./1952.jpg')} alt="Chatbot" /></Link>
+        <Link to='/home' className='Chatbot'><img src={require('./cudie.png')} alt="Chatbot" /></Link>
 
       </div>
     </div>
+      </div>
+      
+    </div>
+    {/* <br></br> */}
     </>
   );
 };

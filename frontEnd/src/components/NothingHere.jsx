@@ -5,7 +5,7 @@ const NothingHere = () => {
   return (
     <div
       className="flex flex-col items-center justify-center 
-        text-purple-600 w-full h-full"
+        text-gray-600 w-full h-full"
     >
       <img src={NothingImage} alt="" />
       <h1 className="text-inherit">Nothing here!</h1>

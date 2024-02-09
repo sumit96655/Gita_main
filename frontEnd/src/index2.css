@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h3 {
-  @apply text-purple-600 font-bold;
+  @apply text-gray-600 font-bold;
 }
 
 h1 {

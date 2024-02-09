@@ -6,7 +6,9 @@ import newRequests from "../utils/newRequest";
 const Send = ({ answer, questionId, setAnswer }) => {
   const queryClient = useQueryClient();
 
+  
   const handleSubmit = async (e) => {
+
     mutation.mutate(questionId);
   };
 
@@ -35,7 +37,7 @@ const Send = ({ answer, questionId, setAnswer }) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-5 h-5 text-purple-700 cursor-pointer hover:scale-110 hover:translate-x-1 hover:transform transition-all duration-300"
+      className="w-5 h-5 text-gray-700 cursor-pointer hover:scale-110 hover:translate-x-1 hover:transform transition-all duration-300"
     >
       <path
         strokeLinecap="round"

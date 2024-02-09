@@ -1,24 +1,14 @@
-import React, { startTransition, useState } from 'react';
+import React, { startTransition, useState,useEffect } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
-// import LoginSignup from './pages/LoginSignup';
-// import React, {useState} from "react";
-// import Search from "../icons/Search";
+// import logo from './logoB.png';
+import logo from './logo3.png';
 import { useNavigate } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
-// import Hamburger from "../icons/Hamburger";
-// import Cancel from "../icons/Cancel";
-// import { useDispatch, useSelector } from "react-redux";
-// import { toggle } from "../context/sidebarSlice";
-import Logout from "./icons/Logout";                                                            
-// import Dark from "../icons/Dark";
-// import Light from "../icons/Light";
-// import { SidebarData } from "./SidebarData";
-
+import Logout from "./icons/Logout";    
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -28,6 +18,20 @@ function Navbar() {
   const user = JSON.parse(localStorage.getItem("user"));
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const closeSidebarOnClickOutside = (e) => {
+      if (sidebar && !e.target.closest('.nav-menu')) {
+        setSidebar(false);
+      }
+    };
+
+    document.addEventListener('click', closeSidebarOnClickOutside);
+
+    return () => {
+      document.removeEventListener('click', closeSidebarOnClickOutside);
+    };
+  }, [sidebar]);
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -35,14 +39,17 @@ function Navbar() {
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-          <span className='text-white text-2xl font-bold pr-[67.5rem]' >GitaSoulConnect</span>
-          {/* <Link to='/Login' className='text-xl font-semibold pl-[57.5rem]'>Login / Register</Link> */}
+          <div className='bg-blend-overlay'>
+          <img src={logo} alt="Website Logo" style={{
+          width: '60%',
+          maxWidth: '300px', // Set a maximum width if needed
+          marginRight: '70rem',
+          padding: '55px',
+          
+          }}/>
+          </div>
 
           <div className="flex items-center gap-3">
-        {/* {dark ? <Light /> : <Dark />} */}
-        {/* {dark ? <Light /> : <Dark />} */}
-
-        {/* // Logout */}
         <Logout />
         <div className="hidden md:flex items-center gap-5 text-white">
           <div
@@ -55,8 +62,7 @@ function Navbar() {
           >
             Logout
           </div>
-          <img
-            //onClick={() => navigate("/login")}
+          <img 
             src={
               user?.profileImage ||
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFY677t7F_8Epm50xo5OfqI882l5OBOPKRDxDWeGo7OQ&s"

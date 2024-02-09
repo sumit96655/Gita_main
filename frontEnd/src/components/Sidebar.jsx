@@ -12,15 +12,15 @@ const Sidebar = () => {
   const open = useSelector((state) => state.sidebar.open);
   const dispatch = useDispatch();
   const active =
-    "  bg-purple-100 text-purple-500 px-4 py-2 rounded-sm border-l-4 border-purple-700";
+    "  bg-gray-700 text-white px-4 py-2 rounded-sm border-l-4 border-gray-900";
   return (
     <div
       className={`${
         open ? "block" : "hidden"
-      } md:block  w-[60%] md:w-[15%] h-full md:h-80 left-0 md:left-28  top-14 md:top-28 list-none 
-    text-gray-300 text-sm space-y-4 py-8 md:py-0
-     bg-white  shadow-md 
-     md:shadow-none md:bg-transparent
+      } md:block  w-[60%] md:w-[21%] h-full md:h-[100vh] left-0 md:left-00 absolute md:top-[5rem] list-none
+    text-gray-900 text-lg space-y-4 py-6 md:py-10 pl-12 
+     bg-[#80808050]  shadow-md 
+     md:shadow-none 
     `}
     >
       <li
@@ -130,7 +130,7 @@ const Sidebar = () => {
           dispatch(toggle());
         }}
         className="md:hidden flex items-center justify-center gap-2 px-4 py-2 cursor-pointer 
-          bg-purple-600 mx-4 rounded-md text-white
+          bg-gray-700 mx-4 rounded-md text-white
           "
       >
         <svg

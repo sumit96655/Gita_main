@@ -1,8 +1,4 @@
-/* 
-=============== 
-Variables
-===============
-*/
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Roboto:wght@700&display=swap');
 
 :root {
   /* dark shades of primary color*/
@@ -18,12 +14,10 @@ Variables
   --clr-primary-8: hsl(205, 86%, 81%);
   --clr-primary-9: hsl(205, 90%, 88%);
   --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-6: hsl(209, 23%, 60%);
   --clr-grey-7: hsl(211, 27%, 70%);
@@ -45,12 +39,6 @@ Variables
   --fixed-width: 620px;
 }
 
-/*
-=============== 
-Global Styles
-===============
-*/
-
 *,
 ::after,
 ::before {
@@ -65,9 +53,6 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
- 
-  /* background: linear-gradient(360deg, hsla(23, 95%, 67%, 1) 0%, hsla(23, 95%, 67%, 1) 0%, hsla(29, 96%, 90%, 1) 38%, hsla(71, 29%, 88%, 1) 65%, hsla(187, 62%, 78%, 1) 100%); */
- 
 
 }
 
@@ -112,10 +97,6 @@ p {
 
 
 @media screen and (min-width: 800px) {
-  /* .tours{
-    grid-template-columns: 1fr 1fr;
-        align-items: start
-  } */
 
   h1 {
     font-size: 4rem;
@@ -145,8 +126,6 @@ p {
   }
 }
 
-/*  global classes */
-
 .section-container{
   
   display: grid; 
@@ -155,20 +134,7 @@ p {
   width: 90vw;
   margin: 0 auto;
 
-  
-  /* background: linear-gradient(360deg, hsla(23, 95%, 67%, 1) 0%, hsla(23, 95%, 67%, 1) 0%, hsla(29, 96%, 90%, 1) 38%, hsla(71, 29%, 88%, 1) 65%, hsla(187, 62%, 78%, 1) 100%); */
-
-  /* background-blend-mode: screen; */
-
 }
-/* .section {
-
-  width: 10vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
-} */
-
-
 
 @media screen and (min-width: 992px) {
   .section {
@@ -190,21 +156,11 @@ p {
   font-size: 1.2rem;
 }
 
-/*
-=============== 
-Tours
-===============
-*/
-
-
-
 main {
   width: 90vw;
   max-width: var(--fixed-width);
-  /* margin: 3rem auto; */
   margin-right: auto;
   margin-left: auto;
-  /* background-color: hsla(187, 62%, 78%, 1); */
 }
 
 .loading {
@@ -292,3 +248,15 @@ main {
   border-radius: var(--radius);
 }
 
+
+.protest-riot-regular {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}

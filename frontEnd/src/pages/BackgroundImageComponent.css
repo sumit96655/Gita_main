@@ -1,92 +1,13 @@
-/* BackgroundImageComponent.css
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
 .background-container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  
-  .content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-  }
-  
-  .controls {
-    margin-bottom: 20px;
-  }
-  
-  input {
-    margin-left: 10px;
-  }
-  
- 
-   */
-/* BackgroundImageComponent.css */
-/* 
-.background-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
- 
-  
-  .content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: flex-start;
-    
-    height: 100%;
-  }
-  
-  .intro-text {
-    text-align: left;
-    max-width: 50%;
-    padding: 20px;
-    color: #fff; 
-  }
-  
-  .intro-header {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .intro-description {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-  
-  .intro-description span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(1em);
-    animation: fadeInUp 0.5s ease forwards;
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-   */
-/* BackgroundImageComponent.css */
-
-.background-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+    height: 139vh;
     overflow: hidden;
     z-index: 1;
    
   }
-  
-  
   
   .content {
     position: relative;
@@ -95,7 +16,7 @@
     flex-direction: column; /* Display content in a column */
     align-items: flex-start; /* Align content to the left */
     padding: 110px;
-    height: 850px;
+    height: 140vh;
     background-color: rgba(0, 0, 0, 0.666);
    
   }
@@ -122,6 +43,7 @@
     margin-top :20px ;
     /* background-color: rgba(0, 0, 0, 0.666); */
     color:rgb(166, 161, 161) ;
+    
   }
   
   .about-text span {
@@ -142,7 +64,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: palegoldenrod;
+    background-color: rgba(128, 128, 128, 0.507);
+    /* filter: blur(1px);     */
+    
+    /* background: transparent; */
+    position: absolute;
+    bottom: 8rem;
+    margin-right: 7rem;
+    border-radius: 25px;
+
   }
   
   .features {
@@ -150,6 +80,8 @@
     max-width: 80%;
     margin-bottom: 20px;
     color: #fff; /* Set the text color */
+    z-index: 1000;
+    filter: none;
 
   }
   
@@ -157,11 +89,16 @@
     font-size: 2rem;
     margin-bottom: 10px;
     padding-left: 40px;
+    color: rgb(239, 247, 221);
+    font-weight: bold;
+    font-family: cursive;
+    text-shadow: 4px 4px black;
   }
   
   .features ul {
     list-style-type: none;
     padding-left: 60px;
+    margin-top: 32px;
     display: flex;
     justify-content: space-evenly;
     
@@ -171,22 +108,21 @@
     margin: 8px;
     padding: 25px;
     border-radius: 10px;
-    /* background-color: rgb(122, 0, 122); */
-    /* background-color: rgb(224, 154, 5); */
-    background-color: rgb(4, 56, 85);
-    color: white;
+    background-color: rgb(180, 196, 147);
+    color: rgb(9, 9, 9);
+    font-family: 'Kalam', cursive;
     font-weight:bold;
+    font-size: 20px;
   }
   
   .chatbot-icon {
     margin-top: 20px; /* Add space between features and chatbot icon */
+    margin-right: 50px;
   }
   
-  /* Style your chatbot icon or button as needed */
   .chatbot-icon img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     cursor: pointer;
     border-radius: 50%;
-    /* Add additional styles as needed */
   }

@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './NavbarHome.css';
 import { IconContext } from 'react-icons';
-// import LoginSignup from './pages/LoginSignup';
-
+import logo from './logo3.png';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -20,8 +19,20 @@ function Navbar() {
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-          <span className='text-white text-2xl font-bold px-8'>GitaSoulConnect</span>
-          <Link to='/login' className='text-xl font-semibold pl-[57.5rem]'>Login / Register</Link>
+          <div>
+          <img
+        src={logo}
+        alt="Website Logo"
+        style={{
+          width: '60%',
+          maxWidth: '300px', // Set a maximum width if needed
+          marginRight: '62rem',
+          padding: '55px',
+          
+          }}
+      />
+          </div>
+          <Link to='/login' className='text-xl font-semibold mr-4'>Login / Register</Link>
 
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

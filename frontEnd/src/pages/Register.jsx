@@ -3,15 +3,13 @@ import React from "react";
 import upload from "../utils/upload";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import backgroundImage from './bg6.jpg';
-// import { useHistory } from "react-router-dom";
+import backgroundImage from './bg16.jpg';
 
 const Register = () => {
   const [profileImage, setProfileImage] = React.useState(
     "https://t4.ftcdn.net/jpg/00/84/67/19/360_F_84671939_jxymoYZO8Oeacc3JRBDE8bSXBWj0ZfA9.jpg"
   );
   const navigate = useNavigate();
-  // const history = useHistory();
 
   const [status, setStatus] = React.useState(null);
   const [name, setName] = React.useState("");
@@ -41,7 +39,6 @@ const Register = () => {
       if (res.status === 201) {
         toast.success("User created successfully");
         setTimeout(() => {
-          // navigate("/login", { replace: true });
           navigate("/login",{replace:true});
         }, 1500);
       } else if (res.status === 400) {
@@ -56,7 +53,6 @@ const Register = () => {
 
   if (status === "success") {
     navigate("/login", { replace: true });
-    // history.push("/login",{replace:true});
   }
 
   const handleFile1 = async (e) => {
@@ -81,7 +77,6 @@ const Register = () => {
       backgroundSize: 'cover',
       
       backgroundPosition: 'center',
-    //   filter: 'blur(4px)', // Adding a blur effect
     };
     return backgroundStyle;
   }
@@ -92,15 +87,15 @@ const Register = () => {
       <div
         className="
       
-      flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 "
+      flex flex-col min-h-screen pt-6 sm:pl-52 sm:pt-24 "
       >
         <div>
           <a href="/">
-            <h3 className="text-4xl font-bold ">GeetaSoulConnect</h3>
+            <h3 className="protest-riot-regular text-4xl font-bold pl-20">GitaSoulConnect</h3>
           </a>
         </div>
         <div
-          className="w-[80%] md:w-full bg-white  border rounded-md 
+          className="w-[80%] md:w-full bg-gray-700  border rounded-md 
         px-6 py-4 mt-6 overflow-hidden  shadow-md sm:max-w-md"
         >
           <form>
@@ -121,7 +116,7 @@ const Register = () => {
               <label
                 htmlFor="name"
                 className="block text-sm font-medium 
-                text-gray-700 "
+                text-white "
               >
                 Name
               </label>
@@ -130,7 +125,7 @@ const Register = () => {
                 onChange={(e) => setName(e.target.value)}
                 type="text"
                 name="name"
-                className="border border-purple-200 mt-2 w-full h-10 px-3 rounded 
+                className="border border-gray-200 mt-2 w-full h-10 px-3 rounded 
                 outline-none 
                    shadow-sm"
               />
@@ -138,7 +133,7 @@ const Register = () => {
             <div className="mt-4">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 "
+                className="block text-sm font-medium text-white "
               >
                 Email
               </label>
@@ -146,7 +141,7 @@ const Register = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 name="email"
-                className="border border-purple-200 mt-2 w-full h-10 px-3 rounded 
+                className="border border-gray-200 mt-2 w-full h-10 px-3 rounded 
                 outline-none 
                    shadow-sm"
               />
@@ -154,7 +149,7 @@ const Register = () => {
             <div className="mt-4">
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700 "
+                className="block text-sm font-medium text-white "
               >
                 Password
               </label>
@@ -162,7 +157,7 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 name="password"
-                className="border border-purple-200 mt-2 w-full h-10 px-3 rounded 
+                className="border border-gray-200 mt-2 w-full h-10 px-3 rounded 
                 outline-none 
                    shadow-sm"
               />
@@ -170,7 +165,7 @@ const Register = () => {
             <div className="mt-4">
               <label
                 htmlFor="password_confirmation"
-                className="block text-sm font-medium text-gray-700 "
+                className="block text-sm font-medium text-white "
               >
                 Confirm Password
               </label>
@@ -178,7 +173,7 @@ const Register = () => {
                 onChange={(e) => setPassword_confirmation(e.target.value)}
                 type="password"
                 name="password_confirmation"
-                className="border border-purple-200 mt-2 w-full h-10 px-3 rounded 
+                className="border border-gray-200 mt-2 w-full h-10 px-3 rounded 
                 outline-none 
                    shadow-sm"
               />
@@ -189,13 +184,13 @@ const Register = () => {
                 className="inline-flex items-center px-4 py-2 text-xs font-semibold 
                 tracking-widest 
                 text-white uppercase transition duration-150 ease-in-out 
-                bg-purple-950 border border-transparent rounded-md 
+                bg-gray-950 border border-transparent rounded-md 
                 active:bg-gray-900 false"
               >
                 Register
               </button>
               <a
-                className="text-sm text-gray-600 underline hover:text-gray-900 pt-1"
+                className="text-sm text-white underline hover:text-gray-100 pt-1"
                 href="/login"
               >
                 Already have an account? Login
