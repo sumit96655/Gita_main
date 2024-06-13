@@ -32,7 +32,7 @@ const Navbar = () => {
      px-4
      md:px-20"
     >
-      <div className="font-bold text-white cursor-pointer flex items-center gap-4 text-2xl">
+      <div className="font-bold text-white  cursor-pointer flex items-center gap-4 text-2xl">
         <div
           onClick={() => dispatch(toggle())}
           className="
