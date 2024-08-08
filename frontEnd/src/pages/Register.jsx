@@ -47,7 +47,7 @@ const Register = () => {
         toast.error("User already exists");
       }
     } catch (err) {
-      toast.error("Something went wrong, error!");
+      toast.error("Something went wrong, error!",err);
     }
   };
 

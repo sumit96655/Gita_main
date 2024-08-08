@@ -5,6 +5,7 @@ import Question from "./model/question.js";
 import Reply from "./model/reply.js";
 import cors from "cors";
 import { Server } from "socket.io";
+import bcrypt from 'bcrypt';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -144,7 +145,8 @@ const tours = [
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://gitasoulconnect-azure.vercel.app",
+    // origin: "https://gitasoulconnect-azure.vercel.app",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
@@ -161,18 +163,41 @@ app.get('/tours', (req, res) => {
 // create a new user
 app.post("/signup", async (req, res) => {
   const { name, password, email, profileImage } = req.body;
-  console.log("req.body", req.body);
+
+  // console.log("Received data:", req.body);
+
   try {
-    const findUser = await User.findOne({ name });
-    if (findUser) {
+    // Check if the username already exists
+    const findUserByName = await User.findOne({ name });
+    if (findUserByName) {
       return res.status(400).json({ message: "Username already exists" });
     }
-    const newUser = await User.create({ name, password, email, profileImage });
+
+    // Check if the email already exists
+    const findUserByEmail = await User.findOne({ email });
+    if (findUserByEmail) {
+      return res.status(400).json({ message: "Email already exists" });
+    }
+
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
+    console.log("Hashed password:", hashedPassword);
+
+    // Create the new user with the hashed password
+    const newUser = await User.create({ name, password: hashedPassword, email, profileImage });
+    console.log("User created:", newUser);
+
     return res.status(201).json({ message: "User created successfully" });
   } catch (error) {
-    res.status(500).json({ message: "Server Error" });
+    // Log the full error for better debugging
+    console.error("Error during signup:", error);
+
+    // Send a more detailed error message (optional, for development)
+    return res.status(500).json({ message: "Server Error", error: error.message });
   }
 });
+
+
 
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -181,10 +206,14 @@ app.post("/login", async (req, res) => {
     if (!findUser) {
       return res.status(400).json({ message: "User does not exist" });
     }
-    if (findUser.password === password) {
-      return res.status(200).json(findUser);
+
+    // Compare the provided password with the stored hashed password
+    const isMatch = await bcrypt.compare(password, findUser.password);
+    if (!isMatch) {
+      return res.status(400).json({ message: "Incorrect password" });
     }
-    return res.status(400).json({ message: "Incorrect password" });
+
+    return res.status(200).json(findUser);
   } catch (error) {
     res.status(500).json({ message: "Server Error" });
   }
