@@ -145,8 +145,8 @@ const tours = [
 app.use(express.json());
 app.use(
   cors({
-    // origin: "https://gitasoulconnect-azure.vercel.app",
-    origin: "http://localhost:3000",
+    origin: "https://gitasoulconnect-azure.vercel.app",
+    // origin: "http://localhost:3000",
     credentials: true,
   })
 );
