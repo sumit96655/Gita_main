@@ -8,7 +8,7 @@ const Arrowup = ({ id }) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `http://localhost:5000/upvote/${id}`,
+        `https://gita-backend.onrender.com/upvote/${id}`,
         {
           userId,
         }

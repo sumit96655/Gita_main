@@ -25,7 +25,7 @@ const Askquestion = () => {
     console.log(question);
 
     const res = await axios.post(
-      "http://localhost:5000/ask-question",
+      "https://gita-backend.onrender.com/ask-question",
       question
     );
     if (res.status === 201) {

@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/login",
+        "https://gita-backend.onrender.com/login",
         user
       );
       if (res.status === 200 && res.data) {
@@ -42,7 +42,7 @@ const Login = () => {
     const backgroundStyle = {
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
-      
+
       backgroundPosition: 'center',
     };
     return backgroundStyle;

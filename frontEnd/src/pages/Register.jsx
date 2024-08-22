@@ -33,7 +33,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/signup",
+        "https://gita-backend.onrender.com/signup",
         user
       );
       if (res.status === 201) {

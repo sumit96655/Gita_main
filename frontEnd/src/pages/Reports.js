@@ -5,7 +5,7 @@ import './summary.css';
 import backgroundImage from './bg8.png';
 import '../background.css';
 
-const url = 'http://localhost:5000/tours';
+const url = 'https://gita-backend.onrender.com/tours';
 
 const Reports = () => {
   

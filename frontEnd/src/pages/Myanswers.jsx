@@ -15,7 +15,7 @@ const Myanswers = () => {
   const { isLoading, data } = useQuery("getMyQuestions", () =>
     newRequests
       .get(
-        `http://localhost:5000/my-questions/${id}`
+        `https://gita-backend.onrender.com/my-questions/${id}`
       )
       .then((res) => res.data)
   );

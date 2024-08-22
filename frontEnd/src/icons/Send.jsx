@@ -16,7 +16,7 @@ const Send = ({ answer, questionId, setAnswer }) => {
     mutationKey: ["new-answer"],
     mutationFn: (id) => {
       return newRequests.post(
-        `http://localhost:5000/answer/${id}`,
+        `https://gita-backend.onrender.com/answer/${id}`,
         {
           answer,
           userId: JSON.parse(localStorage.getItem("user"))._id,

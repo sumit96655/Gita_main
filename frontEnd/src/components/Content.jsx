@@ -21,11 +21,11 @@ const Content = () => {
   const { isLoading, data } = useQuery("getAllQuestions", () => {
     if (topic) {
       return newRequests
-        .get(`http://localhost:5000/find/${topic}`)
+        .get(`https://gita-backend.onrender.com/find/${topic}`)
         .then((res) => res.data);
     } else {
       return newRequests
-        .get("http://localhost:5000/questions")
+        .get("https://gita-backend.onrender.com/questions")
         .then((res) => res.data);
     }
   });

@@ -44,7 +44,7 @@ import { useNavigate } from 'react-router-dom';
 
 const queryClient = new QueryClient();
 
-export const socket = io('http://localhost:5000', {
+export const socket = io('https://gita-backend.onrender.com', {
   withCredentials: true,
   secure: true,
 });
@@ -76,7 +76,7 @@ const Layout = () => {
     });
 
     const getUsers = async () => {
-      const res = await axios.get('http://localhost:5000/allusers');
+      const res = await axios.get('https://gita-backend.onrender.com/allusers');
       setUsers(res.data);
     };
     getUsers();
